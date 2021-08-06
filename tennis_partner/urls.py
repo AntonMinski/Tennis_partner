@@ -17,11 +17,15 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+# from rest_auth.views import LoginView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include("courts.api.urls")),
+    path('api/courts/', include("courts.api.urls")),
+    path('api/users/', include("users.api.urls")),
     path('api-auth/', include("rest_framework.urls")),
+    path('api/rest-auth', include("rest_auth.urls")),
 ]
 
 if settings.DEBUG:
