@@ -6,7 +6,7 @@ from . import views
 
 router = DefaultRouter()
 router.register(r'profiles', views.UserProfileViewSet)
-router.register(r'messages', views.MessageViewSet)
+router.register(r'messages', views.MessageViewSet, basename="status")
 
 profile_list = views.UserProfileViewSet.as_view({'get': 'list'})
 profile_detail = views.UserProfileViewSet.as_view({'get': 'retrieve'})

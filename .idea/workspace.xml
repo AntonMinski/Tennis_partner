@@ -16,8 +16,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="03 authorization tweaks, new authorization modules">
-      <change afterPath="$PROJECT_DIR$/users/api/permissions.py" afterDir="false" />
+    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="04 viewsets, routers">
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/views.py" afterDir="false" />
@@ -145,7 +144,7 @@
       <option name="presentableId" value="Default" />
       <updated>1628159160271</updated>
       <workItem from="1628159173430" duration="17034000" />
-      <workItem from="1628249138759" duration="12421000" />
+      <workItem from="1628249138759" duration="14852000" />
     </task>
     <task id="LOCAL-00001" summary="01 Courts module with api done">
       <created>1628249973473</created>
@@ -168,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628262045022</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="04 viewsets, routers">
+      <created>1628265079228</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1628265079228</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +207,8 @@
     <MESSAGE value="01 Courts module with api done" />
     <MESSAGE value="02 Users models, serializers, authorization, url, listView;&#10;django-rest-auth token" />
     <MESSAGE value="03 authorization tweaks, new authorization modules" />
-    <option name="LAST_COMMIT_MESSAGE" value="03 authorization tweaks, new authorization modules" />
+    <MESSAGE value="04 viewsets, routers" />
+    <option name="LAST_COMMIT_MESSAGE" value="04 viewsets, routers" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1615" y="418" width="482" height="630" key="#Python" timestamp="1628264655361">

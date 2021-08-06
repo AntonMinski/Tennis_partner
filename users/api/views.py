@@ -27,9 +27,31 @@ class UserProfileViewSet(mixins.UpdateModelMixin, mixins.ListModelMixin,
 
 
 class MessageViewSet(ModelViewSet):
-    queryset = Message.objects.all()
+    # queryset = Message.objects.all()
     serializer_class = MessageSerializer
     permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]
+    filter_backends = [SearchFilter]
+    search_fields = ['sender']
+
+    '''
+    # own
+    def get_queryset(self):
+        queryset = Message.objects.all()
+        username = self.request.user.userprofile  # get username or make it None
+        # print(self.request.user.userprofile)
+        if not username:
+            username = None
+        queryset = queryset.filter(sender__user__username=username)  # username same as parametr
+        return queryset
+    '''
+
+    #  tutorial
+    def get_queryset(self):
+        queryset = Message.objects.all()
+        username = self.request.query_params.get("username", None)  # get username from "?username=" from url
+        if username:
+            queryset = queryset.filter(sender__user__username=username)
+        return queryset
 
     def perform_create(self, serializer):
         sender = self.request.user.userprofile
