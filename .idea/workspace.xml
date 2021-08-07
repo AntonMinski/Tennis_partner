@@ -16,22 +16,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="05 view filters">
-      <change afterPath="$PROJECT_DIR$/templates/auth_layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="1.2 BaseUser serializer and view">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/courts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tennis_partner/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tennis_partner/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tennis_partner/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tennis_partner/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/signals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +208,7 @@
       <updated>1628159160271</updated>
       <workItem from="1628159173430" duration="17034000" />
       <workItem from="1628249138759" duration="14866000" />
-      <workItem from="1628315703421" duration="13434000" />
+      <workItem from="1628315703421" duration="22758000" />
     </task>
     <task id="LOCAL-00001" summary="01 Courts module with api done">
       <created>1628249973473</created>
@@ -257,7 +245,21 @@
       <option name="project" value="LOCAL" />
       <updated>1628277109659</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1.1 new user models logic,&#10;account registration">
+      <created>1628330531341</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1628330531342</updated>
+    </task>
+    <task id="LOCAL-00007" summary="1.2 BaseUser serializer and view">
+      <created>1628335973412</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1628335973412</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +295,9 @@
     <MESSAGE value="03 authorization tweaks, new authorization modules" />
     <MESSAGE value="04 viewsets, routers" />
     <MESSAGE value="05 view filters" />
-    <option name="LAST_COMMIT_MESSAGE" value="05 view filters" />
+    <MESSAGE value="1.1 new user models logic,&#10;account registration" />
+    <MESSAGE value="1.2 BaseUser serializer and view" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.2 BaseUser serializer and view" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2022" y="592" width="187" height="185" key="#Custom_Plugin_Repositories" timestamp="1628328096922">
