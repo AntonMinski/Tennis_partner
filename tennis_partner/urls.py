@@ -26,6 +26,7 @@ from users.forms import CustomUserForm
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include("base.urls")),
     path('api/courts/', include("courts.api.urls")),
     path('api/users/', include("users.api.urls")),
 

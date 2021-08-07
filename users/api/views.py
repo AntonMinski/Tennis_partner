@@ -3,22 +3,24 @@ from rest_framework.filters import SearchFilter
 from rest_framework.permissions import IsAuthenticated
 from rest_framework import mixins, viewsets
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
 
 # from users.api.permissions import IsOwnerOrReadOnly, IsOwnProfileOrReadOnly
 from .serializers import UserProfileSerializer, \
-    UserProfileAvatarSerializer, MessageSerializer
+    UserProfileAvatarSerializer, MessageSerializer, BaseUserSerializer
 from .permissions import IsOwnPofileOrRead_only, IsOwnerOrReadOnly
 
-from users.models import UserProfile, Message
+from users.models import UserProfile, Message, BaseUser
 
-'''
-class UserProfileList(generics.ListAPIView):
-    queryset = UserProfile.objects.all()
-    serializer_class = UserProfileSerializer
+
+class BaseUserViewSet(ModelViewSet):
+    queryset = BaseUser.objects.all()
+    serializer_class = BaseUserSerializer
     permission_classes = [IsAuthenticated]
-'''
 
-# same on viewsets:
+
 class UserProfileViewSet(mixins.UpdateModelMixin, mixins.ListModelMixin,
                          mixins.RetrieveModelMixin, viewsets.GenericViewSet):
     queryset = UserProfile.objects.all()

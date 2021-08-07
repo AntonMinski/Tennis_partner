@@ -52,7 +52,7 @@ INSTALLED_APPS = [
 
     'crispy_forms',
 
-    'frame',
+    'base',
     'courts',
     'users',
     'offers',

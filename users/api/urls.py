@@ -5,6 +5,7 @@ from . import views
 
 
 router = DefaultRouter()
+router.register(r'', views.BaseUserViewSet)
 router.register(r'profiles', views.UserProfileViewSet)  # в данном случае list_url = reverse("userprofile-list")
 router.register(r'messages', views.MessageViewSet, basename="status") # basename указывается в тестах (list_url = reverse("status-list")
 
@@ -22,6 +23,8 @@ urlpatterns = [
     # path('profiles/<int:pk>/', profile_detail, name='user-profile-detail'),
 
     path("", include(router.urls)),
+    # path("", views.BaseUserApiView.as_view(), name='users'),
+    # path('avatar/', views.AvatarUpdateView.as_view(), name='avatar-update'),
     path('avatar/', views.AvatarUpdateView.as_view(), name='avatar-update'),
 
 ]
