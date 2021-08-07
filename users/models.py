@@ -1,19 +1,23 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, AbstractUser
+
+
+class BaseUser(AbstractUser):
+    pass
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(BaseUser, on_delete=models.CASCADE)
     bio = models.CharField(max_length=300, blank=True)
     city = models.CharField(max_length=35, blank=True)
     avatar = models.ImageField(null=True, blank=True)
 
-    def __str__(self):
-        return self.user.username
-
-    @property
-    def email(self):
-        return self.user.email
+    # def __str__(self):
+    #     return self.user.username
+    #
+    # @property
+    # def email(self):
+    #     return self.user.email
 
 
 class Message(models.Model):

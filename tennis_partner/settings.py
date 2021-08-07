@@ -39,16 +39,23 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+
     'rest_framework',
     'rest_framework.authtoken',
+
     'rest_auth',
     'rest_auth.registration',
+
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+
+    'crispy_forms',
+
     'frame',
     'courts',
     'users',
+    'offers',
 ]
 
 MIDDLEWARE = [
@@ -137,9 +144,11 @@ MEDIA_ROOT = 'uploads'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+AUTH_USER_MODEL = 'users.BaseUser'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Django-rest
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication',
@@ -147,10 +156,15 @@ REST_FRAMEWORK = {
     ]
 }
 
+# django-contrib-sites
 SITE_ID = 1
 
+# django-allauth
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_EMAIL_REQUIRED = (True)
+
+#crispy-forms
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 # REST_FRAMEWORK = {
@@ -163,3 +177,7 @@ ACCOUNT_EMAIL_REQUIRED = (True)
 #     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
 #     'PAGE_SIZE': 3
 # }
+
+LOGIN_URL = 'accounts/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'

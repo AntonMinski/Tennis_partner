@@ -16,10 +16,22 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="04 viewsets, routers">
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="05 view filters">
+      <change afterPath="$PROJECT_DIR$/templates/auth_layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/courts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tennis_partner/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tennis_partner/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tennis_partner/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tennis_partner/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +44,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -47,6 +60,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -55,10 +69,10 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.documentation.PythonDocumentationConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Python.token-auth-test2">
-    <configuration name="token-auth-test1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Django tests.Test: users.tests.MessageViewSetTestCase">
+    <configuration name="Test: users.tests.MessageViewSetTestCase" type="DjangoTestsConfigurationType" temporary="true">
       <module name="tennis_partner" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -66,18 +80,76 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/clients" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clients/token-auth-test1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="TARGET" value="users.tests.MessageViewSetTestCase" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: users.tests.RegistrationTestCase" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="tennis_partner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="users.tests.RegistrationTestCase" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: users.tests.RegistrationTestCase.test_registration" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="tennis_partner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="users.tests.RegistrationTestCase.test_registration" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: users.tests.UserProfileViewSetTestCase" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="tennis_partner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="users.tests.UserProfileViewSetTestCase" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
     <configuration name="token-auth-test2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -128,8 +200,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Django tests.Test: users.tests.MessageViewSetTestCase" />
+        <item itemvalue="Django tests.Test: users.tests.UserProfileViewSetTestCase" />
+        <item itemvalue="Django tests.Test: users.tests.RegistrationTestCase" />
+        <item itemvalue="Django tests.Test: users.tests.RegistrationTestCase.test_registration" />
         <item itemvalue="Python.token-auth-test2" />
-        <item itemvalue="Python.token-auth-test1" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +219,8 @@
       <option name="presentableId" value="Default" />
       <updated>1628159160271</updated>
       <workItem from="1628159173430" duration="17034000" />
-      <workItem from="1628249138759" duration="14852000" />
+      <workItem from="1628249138759" duration="14866000" />
+      <workItem from="1628315703421" duration="13434000" />
     </task>
     <task id="LOCAL-00001" summary="01 Courts module with api done">
       <created>1628249973473</created>
@@ -174,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628265079228</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="05 view filters">
+      <created>1628277109659</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1628277109659</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,39 +285,49 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="01 Courts module with api done" />
     <MESSAGE value="02 Users models, serializers, authorization, url, listView;&#10;django-rest-auth token" />
     <MESSAGE value="03 authorization tweaks, new authorization modules" />
     <MESSAGE value="04 viewsets, routers" />
-    <option name="LAST_COMMIT_MESSAGE" value="04 viewsets, routers" />
+    <MESSAGE value="05 view filters" />
+    <option name="LAST_COMMIT_MESSAGE" value="05 view filters" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2022" y="592" width="187" height="185" key="#Custom_Plugin_Repositories" timestamp="1628328096922">
+      <screen x="1280" y="0" width="2560" height="1440" />
+    </state>
+    <state x="2022" y="592" width="187" height="185" key="#Custom_Plugin_Repositories/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628328096922" />
     <state x="1615" y="418" width="482" height="630" key="#Python" timestamp="1628264655361">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state x="1615" y="418" width="482" height="630" key="#Python/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628264655361" />
+    <state x="1339" y="388" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1628329720819">
+      <screen x="1280" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1339" y="388" key="#com.intellij.execution.impl.EditConfigurationsDialog/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628329720819" />
     <state x="1608" y="473" width="447" height="520" key="FileChooserDialogImpl" timestamp="1628249869293">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state x="1608" y="473" width="447" height="520" key="FileChooserDialogImpl/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628249869293" />
-    <state width="1137" height="393" key="GridCell.Tab.0.bottom" timestamp="1628261995791">
+    <state width="1269" height="393" key="GridCell.Tab.0.bottom" timestamp="1628321972860">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1137" height="393" key="GridCell.Tab.0.bottom/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628261995791" />
-    <state width="1137" height="393" key="GridCell.Tab.0.center" timestamp="1628261995790">
+    <state width="1269" height="393" key="GridCell.Tab.0.bottom/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628321972860" />
+    <state width="1269" height="393" key="GridCell.Tab.0.center" timestamp="1628321972860">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1137" height="393" key="GridCell.Tab.0.center/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628261995790" />
-    <state width="1137" height="393" key="GridCell.Tab.0.left" timestamp="1628261995790">
+    <state width="1269" height="393" key="GridCell.Tab.0.center/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628321972860" />
+    <state width="1269" height="393" key="GridCell.Tab.0.left" timestamp="1628321972860">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1137" height="393" key="GridCell.Tab.0.left/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628261995790" />
-    <state width="1137" height="393" key="GridCell.Tab.0.right" timestamp="1628261995790">
+    <state width="1269" height="393" key="GridCell.Tab.0.left/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628321972860" />
+    <state width="1269" height="393" key="GridCell.Tab.0.right" timestamp="1628321972860">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1137" height="393" key="GridCell.Tab.0.right/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628261995790" />
+    <state width="1269" height="393" key="GridCell.Tab.0.right/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628321972860" />
     <state width="1753" height="470" key="GridCell.Tab.1.bottom" timestamp="1628188391446">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
@@ -251,10 +344,14 @@
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state width="1753" height="470" key="GridCell.Tab.1.right/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628188391445" />
-    <state x="1369" y="349" width="1022" height="737" key="SettingsEditor" timestamp="1628167177075">
+    <state x="1526" y="313" width="1190" height="737" key="SettingsEditor" timestamp="1628328206431">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state x="1369" y="349" width="1022" height="737" key="SettingsEditor/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628167177075" />
+    <state x="1526" y="313" width="1190" height="737" key="SettingsEditor/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628328206431" />
+    <state x="1496" y="526" width="758" height="390" key="com.jetbrains.python.documentation.PythonDocumentationEntryEditor" timestamp="1628316660386">
+      <screen x="1280" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1496" y="526" width="758" height="390" key="com.jetbrains.python.documentation.PythonDocumentationEntryEditor/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628316660386" />
     <state width="600" height="440" key="javadoc.popup" timestamp="1628167149957">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
@@ -266,6 +363,10 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/tennis_partner$token_auth_test1.coverage" NAME="token-auth-test1 Coverage Results" MODIFIED="1628259814788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/clients" />
+    <SUITE FILE_PATH="coverage/tennis_partner$Test__users_tests_MessageViewSetTestCase.coverage" NAME="Test: users.tests.MessageViewSetTestCase Coverage Results" MODIFIED="1628321962384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/tennis_partner$Test__users_tests_RegistrationTestCase.coverage" NAME="Test: users.tests.RegistrationTestCase Coverage Results" MODIFIED="1628321146317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/tennis_partner$Test__users_tests_UserProfileViewSetTestCase.coverage" NAME="Test: users.tests.UserProfileViewSetTestCase Coverage Results" MODIFIED="1628321150878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/tennis_partner$token_auth_test2.coverage" NAME="token-auth-test2 Coverage Results" MODIFIED="1628261793942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/clients" />
+    <SUITE FILE_PATH="coverage/tennis_partner$Test__users_tests_RegistrationTestCase_test_registration.coverage" NAME="Test: users.tests.RegistrationTestCase.test_registration Coverage Results" MODIFIED="1628316142834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

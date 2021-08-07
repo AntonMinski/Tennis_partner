@@ -5,8 +5,8 @@ from . import views
 
 
 router = DefaultRouter()
-router.register(r'profiles', views.UserProfileViewSet)
-router.register(r'messages', views.MessageViewSet, basename="status")
+router.register(r'profiles', views.UserProfileViewSet)  # в данном случае list_url = reverse("userprofile-list")
+router.register(r'messages', views.MessageViewSet, basename="status") # basename указывается в тестах (list_url = reverse("status-list")
 
 profile_list = views.UserProfileViewSet.as_view({'get': 'list'})
 profile_detail = views.UserProfileViewSet.as_view({'get': 'retrieve'})
