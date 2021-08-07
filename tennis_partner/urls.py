@@ -29,7 +29,7 @@ urlpatterns = [
     path('', include("base.urls")),
     path('api/courts/', include("courts.api.urls")),
     path('api/users/', include("users.api.urls")),
-    path('api/offers/', include("offers.api.urls")),
+    path('api/', include("offers.api.urls")),
 
     path('api-auth/', include("rest_framework.urls")),
     path('api/rest-auth/', include("rest_auth.urls")),
