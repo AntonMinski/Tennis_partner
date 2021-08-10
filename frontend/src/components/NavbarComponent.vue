@@ -1,29 +1,24 @@
 <template>
-<nav class="navbar navbar-expand-lg navbar-light bg-light my-navbar">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light my-navbar">
     <div class="container">
-      <router-link
-        :to="{ name: 'home' }"
-        class="navbar-brand"
+      <router-link :to="{ name: 'home' }" class="navbar-brand"
         >QuestionTime
       </router-link>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <router-link
-              :to="{ name: 'home' }"
-              class="btn btn-sm btn-success"
+            <router-link :to="{ name: 'home' }" class="btn btn-sm btn-success"
               >Home
             </router-link>
           </li>
           <li class="nav-item mx-1">
-            <router-link :to="{ name: 'about' }"
-              class="btn btn-sm btn-danger"
+            <router-link :to="{ name: 'about' }" class="btn btn-sm btn-danger"
               >About
             </router-link>
-<!--              <router-link :to="{ name: 'question-editor' }"-->
-<!--              class="btn btn-sm btn-danger"-->
-<!--              >Ask Question-->
-<!--              </router-link>-->
+            <!--              <router-link :to="{ name: 'question-editor' }"-->
+            <!--              class="btn btn-sm btn-danger"-->
+            <!--              >Ask Question-->
+            <!--              </router-link>-->
           </li>
           <li class="nav-item">
             <a class="btn btn-sm btn-outline-secondary" href="/accounts/logout/"
@@ -37,9 +32,9 @@
 </template>
 
 <script>
-    export default {
-        name: "Navbar"
-    }
+export default {
+  name: "Navbar",
+};
 </script>
 
 <style scoped>
