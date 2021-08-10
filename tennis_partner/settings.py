@@ -56,6 +56,8 @@ INSTALLED_APPS = [
     'courts',
     'users',
     'offers',
+
+    'webpack_loader',
 ]
 
 MIDDLEWARE = [
@@ -183,3 +185,10 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_URL = 'accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'dist/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'frontend', 'webpack-stats.json'),
+    }
+}
