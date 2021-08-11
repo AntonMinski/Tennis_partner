@@ -1,0 +1,9 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+db.sqlite3
+.base/migrations
+.venv
+.uploads
+.frontend/node_modules
+.frontend/public
+.frontend
