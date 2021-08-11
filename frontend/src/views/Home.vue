@@ -17,6 +17,10 @@
           </router-link>
 <!--        <p>{{ offer.details }}</p>-->
       </div>
+      <div class="my-4" >
+        <p v-if="loadingOffers">...loading...</p>
+        <button v-if="next" @click="getOffers">Load more</button>
+      </div>
     </div>
   </div>
 </template>
@@ -32,15 +36,27 @@ export default {
   data() {
     return {
       offers: [],
+      next: null,
+      loadingOffers: false,
     };
   },
   methods: {
 
     getOffers() {
       let endpoint = "api/offers/";
+      if (this.next) {
+        endpoint = this.next;
+      }
+      this.loadingOffers = true;
       apiService(endpoint).then((data) => {
         this.offers.push(...data.results);
+        if (data.next) {
+          this.next = data.next;
+        } else {
+          this.next = null;
+        }
       });
+      this.loadingOffers = false;
     },
   },
   created() {
