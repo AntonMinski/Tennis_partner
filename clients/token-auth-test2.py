@@ -12,14 +12,14 @@ def client():
     # response = requests.post("http://127.0.0.1:8000/api/rest-auth/registration/",
     #                          data=data)
 
-    token_h = "Token e637c3fb6af39acfc06f8ba9c13e251aa16dc0bb"
+    token_h = "Token 66118e816cf45e049f4c56f7626587bcdd75e919"
     headers = {"Authorization": token_h}
 
-    response = requests.get("http://127.0.0.1:8000/api/users/profiles/",
+    response = requests.get("http://127.0.0.1:8000/api/offers/",
                             headers=headers)
 
     print("Status Code: ", response.status_code)
-    
+
     response_data = response.json()
     print(response_data)
 

@@ -1,6 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea
-db.sqlite3
+db.sqlite
 .base/migrations
 .venv
 .uploads
