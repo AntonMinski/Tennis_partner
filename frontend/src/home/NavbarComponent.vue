@@ -8,14 +8,14 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
             <router-link :to="{ name: 'home' }" class="btn btn-sm btn-success"
-              >Home
+              >HomePage
             </router-link>
           </li>
           <li class="nav-item mx-1">
             <router-link
               :to="{ name: 'offer_editor' }"
               class="btn btn-sm btn-danger"
-              >Create Offer
+              >Create OfferPage
             </router-link>
             <!--              <router-link :to="{ name: 'question-editor' }"-->
             <!--              class="btn btn-sm btn-danger"-->

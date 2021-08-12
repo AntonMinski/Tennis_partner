@@ -1,7 +1,7 @@
 <template>
     <div class="single-question mt-2">
     <div v-if="offer" class="container">
-      <h1>Offer details:</h1>
+      <h1>OfferPage details:</h1>
         <p>{{ offer.place }}</p>
         <p>{{ offer.time_range }}</p>
         <p>{{ offer.level }}</p>
@@ -101,7 +101,7 @@
       },
       created() {
           this.getOfferData();
-          this.setPageTitle('Offer details:');
+          this.setPageTitle('OfferPage details:');
       }
     };
 </script>

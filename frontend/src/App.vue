@@ -2,12 +2,12 @@
   <div id="app">
     <navbar-component></navbar-component>
     <router-view />
-    <!--    <router-link to="/">Home</router-link> |-->
+    <!--    <router-link to="/">HomePage</router-link> |-->
   </div>
 </template>
 
 <script>
-import NavbarComponent from "./components/NavbarComponent";
+import NavbarComponent from "./home/NavbarComponent";
 export default {
   components: {
     NavbarComponent,

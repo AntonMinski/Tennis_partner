@@ -20,6 +20,8 @@ class MessageSerializer(serializers.ModelSerializer):
 class OfferSerializer(serializers.ModelSerializer):
     author = serializers.StringRelatedField(read_only=True)
     id = serializers.IntegerField(read_only=True)
+    receiver_name = serializers.StringRelatedField(source='user.username',
+                                                   read_only=True)
     # created_at = serializers.SerializerMethodField()
 
     class Meta:

@@ -6,7 +6,7 @@
           Posted by:
           <span>{{ offer.author }} </span>
         </p>
-        <h4>Offer details:</h4>
+        <h4>OfferPage details:</h4>
         <router-link :to="{ name: 'offer', params: {slug: offer.id} }"
         class="question-link">
         <p>{{ offer.place }}</p>
