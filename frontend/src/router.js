@@ -23,7 +23,7 @@ const router = createRouter({
         { path: '/offers', component: OffersList},
         { path: '/offers/:id', component: OfferDetail, props: true,
             children: [
-                {path: 'contact', component: ContactPartner},
+                {path: 'contact', component: ContactPartner, props: true,},
             ]
         },
         { path: '/create_offer', component: OfferEditor, props: true},

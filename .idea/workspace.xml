@@ -16,9 +16,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.8&#10;matching user id by name, on backend, done">
+    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.8.2 sending messages done with automatic partner match">
       <change beforePath="$PROJECT_DIR$/frontend/src/message/ContactPartner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/ContactPartner.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/offer/OfferDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/offer/OfferDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/webpack-stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack-stats.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tennis_partner/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tennis_partner/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,7 +270,7 @@
       <workItem from="1628743514076" duration="12648000" />
       <workItem from="1628759286565" duration="7286000" />
       <workItem from="1628785124680" duration="66000" />
-      <workItem from="1628831361820" duration="25736000" />
+      <workItem from="1628831361820" duration="27826000" />
     </task>
     <task id="LOCAL-00001" summary="01 Courts module with api done">
       <created>1628249973473</created>
@@ -409,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628858031890</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="2.8.2 sending messages">
+      <created>1628858663859</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1628858663859</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +469,8 @@
     <MESSAGE value="2.6 merge with Vue other components" />
     <MESSAGE value="2.7 done offer details and axios&#10;in process: sendind message" />
     <MESSAGE value="2.8&#10;matching user id by name, on backend, done" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.8&#10;matching user id by name, on backend, done" />
+    <MESSAGE value="2.8.2 sending messages done with automatic partner match" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.8.2 sending messages done with automatic partner match" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2022" y="592" width="187" height="185" key="#Custom_Plugin_Repositories" timestamp="1628328096922">
@@ -486,6 +497,10 @@
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state x="1608" y="473" width="447" height="520" key="FileChooserDialogImpl/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628841991543" />
+    <state x="1738" y="630" key="GitRewordDialog" timestamp="1628858764768">
+      <screen x="1280" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1738" y="630" key="GitRewordDialog/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628858764768" />
     <state width="1481" height="371" key="GridCell.Tab.0.bottom" timestamp="1628764402800">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>

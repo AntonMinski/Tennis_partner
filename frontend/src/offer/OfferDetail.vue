@@ -3,7 +3,8 @@
         <div class="single-question mt-2">
             <basic-card><div><h4>Offer details:</h4></div></basic-card>
             <basic-card>
-            <div v-if="offer" class="container">
+            <div v-if="offer" class="container"
+            >
                 <div><h4></h4></div>
                 <p>Posted by: {{ offer.author }}</p>
                 <p>Place: {{ offer.place }}</p>
@@ -79,11 +80,12 @@
             </div>
                 </basic-card>
             <basic-card>
+
         <basic-button link :to="contactLink">Contact partner</basic-button>
         <basic-button>Book a court</basic-button>
         <basic-button>View partner profile</basic-button>
         <basic-button>contact by messenger</basic-button>
-        <router-view></router-view>
+        <router-view :offer-author="offerAuthor"></router-view>
     </basic-card>
         </div>
 
@@ -95,9 +97,10 @@
     import {apiService, axiosService} from "../common/api.service";
   import BasicCard from "../ui/BasicCard";
   import BasicButton from "../ui/BasicButton";
+    import ContactPartner from "../message/ContactPartner";
     export default {
         name: "Offer",
-        components: {BasicButton, BasicCard},
+        components: {ContactPartner, BasicButton, BasicCard},
         props: {
         id: {
           type: String,
@@ -107,6 +110,7 @@
       data() {
           return {
             offer: {},
+            offerAuthor: '',
           };
       },
       methods: {
@@ -119,6 +123,7 @@
               axiosService(endpoint)
                   .then(data => {
                       this.offer = data;
+                      this.offerAuthor = data.author;
                   })
           },
       },
