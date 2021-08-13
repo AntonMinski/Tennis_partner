@@ -16,12 +16,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.7 done offer details and axios&#10;in process: sendind message">
+    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.8&#10;matching user id by name, on backend, done">
+      <change beforePath="$PROJECT_DIR$/frontend/src/message/ContactPartner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/ContactPartner.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/webpack-stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack-stats.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/offers/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/offers/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/offers/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/offers/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/offers/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/offers/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/offers/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/offers/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +267,7 @@
       <workItem from="1628743514076" duration="12648000" />
       <workItem from="1628759286565" duration="7286000" />
       <workItem from="1628785124680" duration="66000" />
-      <workItem from="1628831361820" duration="25055000" />
+      <workItem from="1628831361820" duration="25736000" />
     </task>
     <task id="LOCAL-00001" summary="01 Courts module with api done">
       <created>1628249973473</created>
@@ -405,7 +402,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628849175047</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="2.8&#10;matching user id by name, on backend, done">
+      <created>1628858031890</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1628858031890</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +458,8 @@
     <MESSAGE value="2.5 Postgres models" />
     <MESSAGE value="2.6 merge with Vue other components" />
     <MESSAGE value="2.7 done offer details and axios&#10;in process: sendind message" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.7 done offer details and axios&#10;in process: sendind message" />
+    <MESSAGE value="2.8&#10;matching user id by name, on backend, done" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.8&#10;matching user id by name, on backend, done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2022" y="592" width="187" height="185" key="#Custom_Plugin_Repositories" timestamp="1628328096922">

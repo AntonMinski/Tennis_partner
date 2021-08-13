@@ -27,21 +27,22 @@
     import {axiosService} from "../common/api.service";
     export default {
         components: {BasicCard},
+        props: [offer.author],
         data() {
           return {
-            email: '1',
-            message: 'undefined',
-              receiver: 'admin',
+            email: '',
+            message: '',
             formIsValid: true
           };
       },
         methods: {
             submitForm() {
+              console.log(this.offer.author);
               let endpoint = `/api/messages/`;
               let method = 'post';
               const data = {
                   content: this.message,
-                  receiver: this.receiver
+                  receiver: this.offer.author
               };
               axiosService(endpoint, method, data)
                   .then(data => {
