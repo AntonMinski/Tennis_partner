@@ -16,25 +16,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.6 merge with Vue other components">
-      <change afterPath="$PROJECT_DIR$/frontend/src/offer/OfferDetail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App-2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App-2.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/common/api.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/common/api.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/home/HomePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/offer/OffersList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/home/NavbarComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/home/NavbarComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/message/ContactPartner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/ContactPartner.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/offer/OfferEditor.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/offer/OfferEditor.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/offer/OfferPage.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router-2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router.js" afterDir="false" />
+    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.7 done offer details and axios&#10;in process: sendind message">
       <change beforePath="$PROJECT_DIR$/frontend/webpack-stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack-stats.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/offers/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/offers/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/offers/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/offers/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/offers/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/offers/api/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/offers/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/offers/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tennis_partner/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tennis_partner/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,7 +270,7 @@
       <workItem from="1628743514076" duration="12648000" />
       <workItem from="1628759286565" duration="7286000" />
       <workItem from="1628785124680" duration="66000" />
-      <workItem from="1628831361820" duration="16449000" />
+      <workItem from="1628831361820" duration="25055000" />
     </task>
     <task id="LOCAL-00001" summary="01 Courts module with api done">
       <created>1628249973473</created>
@@ -411,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628765900041</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="2.7 done offer details and axios&#10;in process: sendind message">
+      <created>1628849175047</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1628849175047</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +453,8 @@
     <MESSAGE value="2.4 new structure (Facade)" />
     <MESSAGE value="2.5 Postgres models" />
     <MESSAGE value="2.6 merge with Vue other components" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.6 merge with Vue other components" />
+    <MESSAGE value="2.7 done offer details and axios&#10;in process: sendind message" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.7 done offer details and axios&#10;in process: sendind message" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2022" y="592" width="187" height="185" key="#Custom_Plugin_Repositories" timestamp="1628328096922">

@@ -22,6 +22,7 @@ message_detail = views.MessageViewSet.as_view({'get': 'retrieve'})
 urlpatterns = [
     path("offers/", include(offers_router.urls)),
     path("messages/", include(message_router.urls)),
+    # path("messages/", views.MessageListCreateAPIView.as_view()),
     # path("messages/", views.MessageListCreateAPIView.as_view(),
     #      name='messages'),
 

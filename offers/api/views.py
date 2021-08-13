@@ -1,7 +1,7 @@
 # from rest_framework import generics, mixins, viewsets
 # from rest_framework.filters import SearchFilter
 # from rest_framework.permissions import IsAuthenticated
-from rest_framework import mixins, viewsets, permissions, generics
+from rest_framework import mixins, viewsets, permissions, generics, status
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -23,30 +23,50 @@ class OfferViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
 
-    # def get_queryset(self):
-    #     # id = self.kwargs.get(id)
-    #     return OfferDetail.objects.all().order_by("-created_at")
-
 
 class MessageListCreateAPIView(generics.ListCreateAPIView):
-    """Allow users to answer a question instance if they haven't already."""
     queryset = Message.objects.all()
     serializer_class = MessageSerializer
     permission_classes = [IsAuthenticated]
 
-    def perform_create(self, serializer):
-        # receiver = get_object_or_404(BaseUser)
-        serializer.save(sender=self.request.user)
+    def post(self, request):
+        data_user_name = request.data['receiver']
+        receiver = BaseUser.objects.get(username=data_user_name).id
+        data = {
+            'sender': request.user.id,
+            'receiver': receiver,
+            'content': request.data['content'],
+        }
+        serializer_context = {"request": request}
+        serializer = self.serializer_class(data=data, context=serializer_context)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class MessageViewSet(viewsets.ModelViewSet):
-    """Allow users to answer a question instance if they haven't already."""
     queryset = Message.objects.all()
     serializer_class = MessageSerializer
     permission_classes = [IsAuthenticated]
 
-    def perform_create(self, serializer):
-        # receiver = get_object_or_404(BaseUser)
-        serializer.save(sender=self.request.user)
+    def create(self, request):
+        data_user_name = request.data['receiver']
+        receiver = BaseUser.objects.get(username=data_user_name).id
+        data = {
+            'sender': request.user.id,
+            'receiver': receiver,
+            'content': request.data['content'],
+        }
+        serializer_context = {"request": request}
+        serializer = self.serializer_class(data=data,
+                                           context=serializer_context)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
+#
+#     def perform_create(self, serializer):
+#         print(self.kwargs)
+#         serializer.save(sender=self.request.user, receiver='1', content='dfdffd')
