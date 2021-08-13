@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomePage from "./home/HomePage.vue";
-import OfferPage from "./offer/OfferPage.vue";
+import HomePage from "./offer/OffersList.vue";
+import OfferPage from "./offer/OfferDetail.vue";
 import OfferEditor from "./offer/OfferEditor";
 
 const routes = [
@@ -10,7 +10,7 @@ const routes = [
     component: HomePage,
   },
   {
-    path: "/offers/:slug",
+    path: "/offers/:id",
     name: "offer",
     component: OfferPage,
     props: true,

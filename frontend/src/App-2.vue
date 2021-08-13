@@ -2,7 +2,7 @@
   <div id="app">
     <navbar-component></navbar-component>
     <router-view />
-    <!--    <router-link to="/">HomePage</router-link> |-->
+    <!--    <router-link to="/">OffersList</router-link> |-->
   </div>
 </template>
 

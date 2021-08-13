@@ -25,7 +25,7 @@ class OfferViewSet(viewsets.ModelViewSet):
 
     # def get_queryset(self):
     #     # id = self.kwargs.get(id)
-    #     return OfferPage.objects.all().order_by("-created_at")
+    #     return OfferDetail.objects.all().order_by("-created_at")
 
 
 class MessageListCreateAPIView(generics.ListCreateAPIView):

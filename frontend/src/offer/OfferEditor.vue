@@ -2,6 +2,7 @@
 
 <template>
   <div class="container mt-2">
+    <basic-card>
     <h1 class="mb-3">Create an offer</h1>
     <form @submit.prevent="submitOffer">
       <input v-model="place" class="form-control" placeholder="place" />
@@ -18,13 +19,16 @@
       <button type="submit" class="btn btn-success">Publish</button>
     </form>
     <p v-if="error" class="muted mt-2">{{ error }}</p>
+    </basic-card>
   </div>
 </template>
 
 <script>
 import { apiService } from "../common/api.service";
+import BasicCard from "../ui/BasicCard";
 export default {
   name: "OfferEditor",
+  components: {BasicCard},
   data() {
     return {
       place: "",
@@ -54,7 +58,7 @@ export default {
           console.log(offer_data);
           this.$router.push({
             name: "offer",
-            params: { slug: offer_data.id },
+            params: { id: offer_data.id },
           });
         })
         .catch((err) => console.log(err));

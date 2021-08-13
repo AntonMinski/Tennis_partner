@@ -10,8 +10,8 @@ import NotFound from "./home/NotFound";
 import UserAuth from "./user/UserAuth";
 import store from './store/index'
 
-import HomePage from "./home/HomePage";
-import OfferPage from "./offer/OfferPage";
+import OffersList from "./offer/OffersList";
+import OfferDetail from "./offer/OfferDetail";
 import OfferEditor from "./offer/OfferEditor";
 
 
@@ -20,17 +20,22 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         { path: '/', redirect: '/partners' },
-        { path: '/offers', component: HomePage},
-        { path: '/offers/:slug', component: OfferPage, props: true},
-        { path: '/create_offer', component: OfferEditor, props: true},
-        { path: '/partners', component: PartnerList },
-        { path: '/partners/:id', component: PartnerDetail, props: true,
+        { path: '/offers', component: OffersList},
+        { path: '/offers/:id', component: OfferDetail, props: true,
             children: [
-                { path: 'contact', component: ContactPartner },
-            ] },
+                {path: 'contact', component: ContactPartner},
+            ]
+        },
+        { path: '/create_offer', component: OfferEditor, props: true},
+        // { path: '/contact/:id', component: ContactPartner, props: true},
+        { path: '/partners', component: PartnerList },
+        { path: '/partners/:id', component: PartnerDetail, props: true,},
+            // children: [
+            //     { path: 'contact', component: ContactPartner },
+            // ] },
         { path: '/register', component: PartnerRegistration}, // meta: {requiresAuth: true}
         { path: '/requests', component: RequestsReceived},  // meta: {requiresAuth: true}
-        { path: '/auth', component: UserAuth},  // meta: {requiresNone: true}
+        { path: '//auth', component: UserAuth},  // meta: {requiresNone: true}
         { path: '/:notFound(.*)', component: NotFound },
     ],
 });
