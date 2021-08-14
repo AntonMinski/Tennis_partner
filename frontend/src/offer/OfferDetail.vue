@@ -85,7 +85,8 @@
         <basic-button>Book a court</basic-button>
         <basic-button>View partner profile</basic-button>
         <basic-button>contact by messenger</basic-button>
-        <router-view :offer-author="offerAuthor"></router-view>
+        <router-view :message-receiver="offerAuthor"
+        ></router-view>
     </basic-card>
         </div>
 

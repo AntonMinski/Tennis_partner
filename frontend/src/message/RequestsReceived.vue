@@ -20,8 +20,13 @@
                     <message-item v-for="message in messages_list"
                                   :key="message.id"
                                   :id="message.id"
+                                  :sender="message.sender"
+                                  :sender_name="message.sender_name"
+                                  :receiver="message.receiver"
+                                  :receiver_name="message.receiver_name"
                                   :content="message.content"
-                                  :created_at="message.created_at">
+                                  :created_at="message.created_at"
+                                  :mode="receive_mode">
                     </message-item>
                     <button v-if="next" @click="getMessagesList">Load more</button>
                 </ul>

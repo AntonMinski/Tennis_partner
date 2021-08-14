@@ -34,9 +34,11 @@ const router = createRouter({
             //     { path: 'contact', component: ContactPartner },
             // ] },
         { path: '/register', component: PartnerRegistration}, // meta: {requiresAuth: true}
-        { path: '/messages', component: RequestsReceived},  // meta: {requiresAuth: true}
-        { path: '/messages/received', component: RequestsReceived},
-        { path: '/messages/sent', component: RequestsReceived},
+        { path: '/messages', component: RequestsReceived, props:true,
+            children: [
+                {path: 'contact', component: ContactPartner, props: true,}
+            ]
+        },
         { path: '//auth', component: UserAuth},  // meta: {requiresNone: true}
         { path: '/:notFound(.*)', component: NotFound },
     ],

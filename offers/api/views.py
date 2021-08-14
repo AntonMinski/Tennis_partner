@@ -71,8 +71,10 @@ class MessageViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
 
     def create(self, request):
-        data_user_name = request.data['receiver']
-        receiver = BaseUser.objects.get(username=data_user_name).id
+        data_receiver = request.data['receiver']
+        # data_sender = request.data['sender']
+        receiver = BaseUser.objects.get(username=data_receiver).id
+        # sender = BaseUser.objects.get(username=data_sender).id
         data = {
             'sender': request.user.id,
             'receiver': receiver,

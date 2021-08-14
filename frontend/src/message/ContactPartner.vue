@@ -27,11 +27,12 @@
     import {axiosService} from "../common/api.service";
     export default {
         components: {BasicCard},
+        // props: ['messageReceiver']
         props: {
-            offerAuthor: {
+            messageReceiver: {
                 type: String,
                 required: true,
-            }
+            },
         },
         data() {
           return {
@@ -46,7 +47,7 @@
               let method = 'post';
               const data = {
                   content: this.message,
-                  receiver: this.offerAuthor
+                  receiver: this.messageReceiver
               };
               axiosService(endpoint, method, data)
                   .then(data => {

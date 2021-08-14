@@ -4,9 +4,9 @@ from datetime import datetime
 
 
 class MessageSerializer(serializers.ModelSerializer):
-    # sender = serializers.StringRelatedField(read_only=True)
+    sender_name = serializers.StringRelatedField(source='sender')
     # created_dt = serializers.SerializerMethodField()
-    # receiver_name = serializers.StringRelatedField(source='receiver', read_only=True)
+    receiver_name = serializers.StringRelatedField(source='receiver')
 
     class Meta:
         model = Message

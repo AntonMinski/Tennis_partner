@@ -16,9 +16,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.9 sent/received messages">
+    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.10 messages with Load_more button">
+      <change beforePath="$PROJECT_DIR$/frontend/src/message/ContactPartner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/ContactPartner.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/message/MessageItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/MessageItem.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/message/RequestsReceived.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/RequestsReceived.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/offer/OfferDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/offer/OfferDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/webpack-stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack-stats.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/offers/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/offers/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/offers/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/offers/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +278,7 @@
       <workItem from="1628759286565" duration="7286000" />
       <workItem from="1628785124680" duration="66000" />
       <workItem from="1628831361820" duration="28462000" />
-      <workItem from="1628920318588" duration="13627000" />
+      <workItem from="1628920318588" duration="18233000" />
     </task>
     <task id="LOCAL-00001" summary="01 Courts module with api done">
       <created>1628249973473</created>
@@ -435,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628932446564</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="2.10 messages with Load_more button">
+      <created>1628934725334</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1628934725334</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,7 +501,8 @@
     <MESSAGE value="2.8.2 sending messages done with automatic partner match" />
     <MESSAGE value="2.8.3 sending props to child done" />
     <MESSAGE value="2.9 sent/received messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.9 sent/received messages" />
+    <MESSAGE value="2.10 messages with Load_more button" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.10 messages with Load_more button" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2022" y="592" width="187" height="185" key="#Custom_Plugin_Repositories" timestamp="1628328096922">
