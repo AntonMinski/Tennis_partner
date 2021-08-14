@@ -16,26 +16,16 @@
                 </header>
             </basic-card>
                 <loading-spinner v-if="isLoading"></loading-spinner>
-                <ul v-else>
-                    <message-item v-if="receive_mode"
-                                  v-for="message in messages_received_list"
+                <ul v-else-if="messages_list">
+                    <message-item v-for="message in messages_list"
                                   :key="message.id"
                                   :id="message.id"
                                   :content="message.content"
                                   :created_at="message.created_at">
                     </message-item>
-                    <message-item v-else
-                                  v-for="message in messages_sent_list"
-                                  :key="message.id"
-                                  :id="message.id"
-                                  :content="message.content"
-                                  :created_at="message.created_at">
-                    </message-item>
-                    <button v-if="next_received & receive_mode" @click="getReceivedList">Load more</button>
-                    <button v-if="next_sent & !receive_mode" @click="getSentList">Load more</button>
+                    <button v-if="next" @click="getMessagesList">Load more</button>
                 </ul>
-
-<!--                <h5 v-else>You haven`t received messages yet...</h5>-->
+                <h5 v-else>You haven`t received messages yet...</h5>
         </section>
     </div>
 </template>
@@ -52,80 +42,58 @@
                 isLoading: false,
                 error: null,
                 receive_mode: true,
-                messages_received_list: [],
-                messages_sent_list: [],
-                next_received: null,
-                next_sent: null,
+                messages_list: [],
+                next: null,
+                endpoint_receive: 'api/messages_received/',
+                endpoint_sent: 'api/messages_sent/',
+                endpoint: '',
             };
         },
         computed: {
-            switchReceivedMode() {
-                this.receive_mode = true;
-                this.next_received = false;
-                this.messages_sent_list = [];
-                this.getReceivedList();
-                // console.log(this.receive_mode);
-                // console.log(this.next_sent);
-            },
-            switchSentMode() {
-                this.receive_mode = false;
-                this.next_sent = false;
-                this.messages_received_list = [];
-                this.getSentList();
-                console.log('now this next_sent = ', this.next_sent, ' and');
-                console.log('now this receive_mode = ', this.receive_mode);
-            },
             receivedRequests() {
-                return this.$store.getters['requests/requests'];
+                return this.$store.getters['requests/requests']
             },
             hasRequests() {
-                return this.$store.getters['requests/hasRequests'];
+                return this.$store.getters['requests/hasRequests']
             },
         },
         created() {
             // this.loadRequests();
-            this.getReceivedList();
-            // this.getSentList();
+            this.switchReceivedMode();
+            // this.switchReceivedMode()
         },
         methods: {
+            getMessagesList() {
+                let endpoint = this.endpoint;
 
-            getReceivedList() {
-                let endpoint = 'api/messages_received/';
-                if (this.next_received) {
-                    endpoint = this.next_received;
+                if (this.next) {
+                    endpoint = this.next;
                 }
+
                 axiosService(endpoint)
                     .then(data => {
-                        this.messages_received_list.push(...data.results);
-                        console.log(this.messages_received_list);
+                        this.messages_list.push(...data.results);
                         if (data.next) {
-                            console.log('data_next_received')
-                            this.next_received = data.next;
+                            this.next = data.next;
                         } else {
-                            this.next_received = null;
+                            this.next = null;
                         }
                     });
-
             },
-
-            getSentList() {
-                let endpoint = 'api/messages_sent/';
-                if (this.next_sent) {
-                    endpoint = this.next_sent;
-                }
-                axiosService(endpoint)
-                    .then(data => {
-                        this.messages_sent_list.push(...data.results);
-                        console.log(this.messages_sent_list);
-                        if (data.next) {
-                            console.log('data_next_sent')
-                            this.next_sent = data.next;
-                            console.log(this.next_sent)
-                        } else {
-                            this.next_sent = null;
-                        }
-                    });
-
+            getInitialState() {
+                this.messages_list = [];
+                this.next = null;
+                this.getMessagesList()
+            },
+            switchReceivedMode() {
+                this.receive_mode = true;
+                this.endpoint = this.endpoint_receive;
+                this.getInitialState();
+            },
+            switchSentMode() {
+                this.receive_mode = false;
+                this.endpoint = this.endpoint_sent;
+                this.getInitialState();
             },
 
             async loadRequests() {

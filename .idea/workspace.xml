@@ -16,19 +16,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.8.3 sending props to child done">
-      <change afterPath="$PROJECT_DIR$/frontend/src/message/MessageItem.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/message/ReceivedItem.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/message/SentItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/home/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/home/TheHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/message/MessageComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/MessageComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/message/RequestItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/RequestItem.vue" afterDir="false" />
+    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.9 sent/received messages">
       <change beforePath="$PROJECT_DIR$/frontend/src/message/RequestsReceived.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/RequestsReceived.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/webpack-stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack-stats.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/offers/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/offers/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/offers/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/offers/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +272,7 @@
       <workItem from="1628759286565" duration="7286000" />
       <workItem from="1628785124680" duration="66000" />
       <workItem from="1628831361820" duration="28462000" />
-      <workItem from="1628920318588" duration="11343000" />
+      <workItem from="1628920318588" duration="13627000" />
     </task>
     <task id="LOCAL-00001" summary="01 Courts module with api done">
       <created>1628249973473</created>
@@ -438,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628860764551</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="2.9 sent/received messages">
+      <created>1628932446564</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1628932446564</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +487,8 @@
     <MESSAGE value="2.8&#10;matching user id by name, on backend, done" />
     <MESSAGE value="2.8.2 sending messages done with automatic partner match" />
     <MESSAGE value="2.8.3 sending props to child done" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.8.3 sending props to child done" />
+    <MESSAGE value="2.9 sent/received messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.9 sent/received messages" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2022" y="592" width="187" height="185" key="#Custom_Plugin_Repositories" timestamp="1628328096922">
