@@ -24,6 +24,7 @@ class OfferViewSet(viewsets.ModelViewSet):
         serializer.save(author=self.request.user)
 
 
+# взял тот же вариант ниже, этот пока не активен
 class MessageListCreateAPIView(generics.ListCreateAPIView):
     queryset = Message.objects.all()
     serializer_class = MessageSerializer
@@ -44,6 +45,25 @@ class MessageListCreateAPIView(generics.ListCreateAPIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
+class MessagesSentListAPIView(generics.ListAPIView):
+    serializer_class = MessageSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        sent_messages = Message.objects.filter(
+            sender=self.request.user).order_by('-created_at')
+        return sent_messages
+
+
+class MessagesReceivedListAPIView(generics.ListAPIView):
+    serializer_class = MessageSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        received_messages = Message.objects.filter(
+            receiver=self.request.user).order_by('-created_at')
+        return received_messages
 
 class MessageViewSet(viewsets.ModelViewSet):
     queryset = Message.objects.all()

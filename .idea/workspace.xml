@@ -16,12 +16,19 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.8.2 sending messages done with automatic partner match">
-      <change beforePath="$PROJECT_DIR$/frontend/src/message/ContactPartner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/ContactPartner.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/offer/OfferDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/offer/OfferDetail.vue" afterDir="false" />
+    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.8.3 sending props to child done">
+      <change afterPath="$PROJECT_DIR$/frontend/src/message/MessageItem.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/message/ReceivedItem.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/message/SentItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/home/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/home/TheHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/message/MessageComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/MessageComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/message/RequestItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/RequestItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/message/RequestsReceived.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/RequestsReceived.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/webpack-stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack-stats.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tennis_partner/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tennis_partner/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/offers/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/offers/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/offers/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/offers/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +83,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../e_store" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/message" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -91,6 +98,11 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/message" />
+      <recent name="$PROJECT_DIR$/frontend/src/ui" />
+      <recent name="$PROJECT_DIR$/frontend/src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src/offer" />
       <recent name="$PROJECT_DIR$/frontend/src/home" />
@@ -98,11 +110,8 @@
       <recent name="$PROJECT_DIR$/frontend/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/frontend/src" />
-    </key>
   </component>
-  <component name="RunManager" selected="Python.fake db">
+  <component name="RunManager" selected="Django Server.tennis_partner">
     <configuration name="Test: users.tests.MessageViewSetTestCase" type="DjangoTestsConfigurationType" temporary="true">
       <module name="tennis_partner" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -117,26 +126,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="TARGET" value="users.tests.MessageViewSetTestCase" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Test: users.tests.UserProfileViewSetTestCase" type="DjangoTestsConfigurationType" temporary="true">
-      <module name="tennis_partner" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="users.tests.UserProfileViewSetTestCase" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
@@ -209,6 +198,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="tennis_partner" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/offers/api" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/offers/api/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="tennis_partner" type="Python.DjangoServer" factoryName="Django server">
       <module name="tennis_partner" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -235,11 +246,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.views" />
         <item itemvalue="Python.fake db" />
         <item itemvalue="Python.token-auth-test2" />
         <item itemvalue="Python.04" />
         <item itemvalue="Django tests.Test: users.tests.MessageViewSetTestCase" />
-        <item itemvalue="Django tests.Test: users.tests.UserProfileViewSetTestCase" />
       </list>
     </recent_temporary>
   </component>
@@ -270,7 +281,8 @@
       <workItem from="1628743514076" duration="12648000" />
       <workItem from="1628759286565" duration="7286000" />
       <workItem from="1628785124680" duration="66000" />
-      <workItem from="1628831361820" duration="27826000" />
+      <workItem from="1628831361820" duration="28462000" />
+      <workItem from="1628920318588" duration="11343000" />
     </task>
     <task id="LOCAL-00001" summary="01 Courts module with api done">
       <created>1628249973473</created>
@@ -419,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628858663859</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="2.8.3 sending props to child done">
+      <created>1628860764551</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1628860764551</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +489,8 @@
     <MESSAGE value="2.7 done offer details and axios&#10;in process: sendind message" />
     <MESSAGE value="2.8&#10;matching user id by name, on backend, done" />
     <MESSAGE value="2.8.2 sending messages done with automatic partner match" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.8.2 sending messages done with automatic partner match" />
+    <MESSAGE value="2.8.3 sending props to child done" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.8.3 sending props to child done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2022" y="592" width="187" height="185" key="#Custom_Plugin_Repositories" timestamp="1628328096922">
@@ -501,38 +521,38 @@
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state x="1738" y="630" key="GitRewordDialog/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628858764768" />
-    <state width="1481" height="371" key="GridCell.Tab.0.bottom" timestamp="1628764402800">
+    <state width="1189" height="481" key="GridCell.Tab.0.bottom" timestamp="1628921759756">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1481" height="371" key="GridCell.Tab.0.bottom/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628764402800" />
-    <state width="1481" height="371" key="GridCell.Tab.0.center" timestamp="1628764402800">
+    <state width="1189" height="481" key="GridCell.Tab.0.bottom/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628921759756" />
+    <state width="1189" height="481" key="GridCell.Tab.0.center" timestamp="1628921759756">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1481" height="371" key="GridCell.Tab.0.center/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628764402800" />
-    <state width="1481" height="371" key="GridCell.Tab.0.left" timestamp="1628764402800">
+    <state width="1189" height="481" key="GridCell.Tab.0.center/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628921759756" />
+    <state width="1189" height="481" key="GridCell.Tab.0.left" timestamp="1628921759756">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1481" height="371" key="GridCell.Tab.0.left/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628764402800" />
-    <state width="1481" height="371" key="GridCell.Tab.0.right" timestamp="1628764402800">
+    <state width="1189" height="481" key="GridCell.Tab.0.left/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628921759756" />
+    <state width="1189" height="481" key="GridCell.Tab.0.right" timestamp="1628921759756">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1481" height="371" key="GridCell.Tab.0.right/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628764402800" />
-    <state width="1753" height="470" key="GridCell.Tab.1.bottom" timestamp="1628188391446">
+    <state width="1189" height="481" key="GridCell.Tab.0.right/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628921759756" />
+    <state width="1189" height="481" key="GridCell.Tab.1.bottom" timestamp="1628921759756">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1753" height="470" key="GridCell.Tab.1.bottom/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628188391446" />
-    <state width="1753" height="470" key="GridCell.Tab.1.center" timestamp="1628188391445">
+    <state width="1189" height="481" key="GridCell.Tab.1.bottom/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628921759756" />
+    <state width="1189" height="481" key="GridCell.Tab.1.center" timestamp="1628921759756">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1753" height="470" key="GridCell.Tab.1.center/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628188391445" />
-    <state width="1753" height="470" key="GridCell.Tab.1.left" timestamp="1628188391445">
+    <state width="1189" height="481" key="GridCell.Tab.1.center/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628921759756" />
+    <state width="1189" height="481" key="GridCell.Tab.1.left" timestamp="1628921759756">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1753" height="470" key="GridCell.Tab.1.left/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628188391445" />
-    <state width="1753" height="470" key="GridCell.Tab.1.right" timestamp="1628188391445">
+    <state width="1189" height="481" key="GridCell.Tab.1.left/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628921759756" />
+    <state width="1189" height="481" key="GridCell.Tab.1.right" timestamp="1628921759756">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1753" height="470" key="GridCell.Tab.1.right/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628188391445" />
+    <state width="1189" height="481" key="GridCell.Tab.1.right/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628921759756" />
     <state x="2075" y="198" width="1190" height="737" key="SettingsEditor" timestamp="1628673899248">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
@@ -541,6 +561,10 @@
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state x="1851" y="502" width="494" height="461" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628760988860" />
+    <state x="1394" y="204" width="1476" height="987" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1628921713736">
+      <screen x="1280" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1394" y="204" width="1476" height="987" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628921713736" />
     <state x="1496" y="526" width="758" height="390" key="com.jetbrains.python.documentation.PythonDocumentationEntryEditor" timestamp="1628316660386">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
@@ -564,6 +588,7 @@
     <SUITE FILE_PATH="coverage/tennis_partner$04.coverage" NAME="04 Coverage Results" MODIFIED="1628754004972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/clients" />
     <SUITE FILE_PATH="coverage/tennis_partner$fake_db.coverage" NAME="fake db Coverage Results" MODIFIED="1628762870762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/clients" />
     <SUITE FILE_PATH="coverage/tennis_partner$Test__users_tests_RegistrationTestCase.coverage" NAME="Test: users.tests.RegistrationTestCase Coverage Results" MODIFIED="1628321146317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/tennis_partner$views.coverage" NAME="views Coverage Results" MODIFIED="1628921405101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/offers/api" />
     <SUITE FILE_PATH="coverage/tennis_partner$Test__users_tests_UserProfileViewSetTestCase.coverage" NAME="Test: users.tests.UserProfileViewSetTestCase Coverage Results" MODIFIED="1628321150878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/tennis_partner$token_auth_test2.coverage" NAME="token-auth-test2 Coverage Results" MODIFIED="1628762406136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/clients" />
     <SUITE FILE_PATH="coverage/tennis_partner$Test__users_tests_RegistrationTestCase_test_registration.coverage" NAME="Test: users.tests.RegistrationTestCase.test_registration Coverage Results" MODIFIED="1628316142834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

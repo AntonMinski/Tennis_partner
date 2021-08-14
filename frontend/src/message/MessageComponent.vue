@@ -37,7 +37,6 @@ import { apiService } from "../common/api.service";
         name: "MessageComponent",
         props: {
         },
-        import {api}
 
     }
 </script>

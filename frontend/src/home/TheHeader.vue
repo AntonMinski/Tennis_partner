@@ -7,8 +7,8 @@
                 <li class="delim">/</li>
                 <li><router-link to="/offers">Offers</router-link></li>
                 <li class="delim">/</li>
-                <li v-if="isLoggedIn"><router-link to="/requests">Requests</router-link></li>
-                <li v-else><router-link to="/auth">Login</router-link></li>
+                <li><router-link to="/messages">Messages</router-link></li>
+                <li><router-link to="/auth">Login</router-link></li>
                 <li v-if="isLoggedIn"><basic-button @click="logout ">Logout</basic-button></li>
             </ul>
         </nav>
