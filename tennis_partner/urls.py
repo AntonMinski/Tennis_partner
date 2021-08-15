@@ -42,7 +42,7 @@ urlpatterns = [
          name='django_registration_register'),
     path('account/', include('django.contrib.auth.urls')),
     path('account/', include('django_registration.backends.one_step.urls')),
-
+    path('accounts/', include('allauth.urls')),
     re_path(r"^.*$", IndexTemplateView.as_view(), name="entry-point")
 
 ]

@@ -16,15 +16,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.12 mixin on apiService, axiosService">
-      <change beforePath="$PROJECT_DIR$/frontend/src/home/NavbarComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/home/NavbarComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/home/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/home/TheHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/modules/auth/actions_old.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/webpack-stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack-stats.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/auth_layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/auth_layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.13 django login with vue rendering">
+      <change beforePath="$PROJECT_DIR$/base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tennis_partner/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tennis_partner/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tennis_partner/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tennis_partner/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,7 +277,7 @@
       <workItem from="1628785124680" duration="66000" />
       <workItem from="1628831361820" duration="28462000" />
       <workItem from="1628920318588" duration="18299000" />
-      <workItem from="1629006527782" duration="9063000" />
+      <workItem from="1629006527782" duration="14702000" />
     </task>
     <task id="LOCAL-00001" summary="01 Courts module with api done">
       <created>1628249973473</created>
@@ -464,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629010944499</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="2.13 django login with vue rendering">
+      <created>1629017842778</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1629017842778</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +499,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="01 Courts module with api done" />
     <MESSAGE value="02 Users models, serializers, authorization, url, listView;&#10;django-rest-auth token" />
     <MESSAGE value="03 authorization tweaks, new authorization modules" />
     <MESSAGE value="04 viewsets, routers" />
@@ -520,7 +523,8 @@
     <MESSAGE value="2.10 messages with Load_more button" />
     <MESSAGE value="2.11 answer button" />
     <MESSAGE value="2.12 mixin on apiService, axiosService" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.12 mixin on apiService, axiosService" />
+    <MESSAGE value="2.13 django login with vue rendering" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.13 django login with vue rendering" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2022" y="592" width="187" height="185" key="#Custom_Plugin_Repositories" timestamp="1628328096922">
@@ -611,10 +615,10 @@
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state width="600" height="440" key="javadoc.popup/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628167149957" />
-    <state x="1437" y="347" width="672" height="678" key="search.everywhere.popup" timestamp="1628678900609">
+    <state x="1437" y="347" width="672" height="678" key="search.everywhere.popup" timestamp="1629021158036">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state x="1437" y="347" width="672" height="678" key="search.everywhere.popup/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628678900609" />
+    <state x="1437" y="347" width="672" height="678" key="search.everywhere.popup/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629021158036" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/tennis_partner$token_auth_test1.coverage" NAME="token-auth-test1 Coverage Results" MODIFIED="1628259814788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/clients" />

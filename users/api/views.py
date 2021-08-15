@@ -21,8 +21,14 @@ class BaseUserViewSet(ModelViewSet):
     permission_classes = [IsAuthenticated]
 
 
-class UserProfileViewSet(mixins.UpdateModelMixin, mixins.ListModelMixin,
+class UserProfileViewSet_old(mixins.UpdateModelMixin, mixins.ListModelMixin,
                          mixins.RetrieveModelMixin, viewsets.GenericViewSet):
+    queryset = UserProfile.objects.all()
+    serializer_class = UserProfileSerializer
+    permission_classes = [IsAuthenticated, IsOwnPofileOrRead_only]
+
+
+class UserProfileListApiView(generics.ListAPIView):
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer
     permission_classes = [IsAuthenticated, IsOwnPofileOrRead_only]
