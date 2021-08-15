@@ -95,13 +95,10 @@
 </template>
 
 <script>
-    import {apiService, axiosService} from "../common/api.service";
-  import BasicCard from "../ui/BasicCard";
-  import BasicButton from "../ui/BasicButton";
     import ContactPartner from "../message/ContactPartner";
     export default {
         name: "Offer",
-        components: {ContactPartner, BasicButton, BasicCard},
+        components: {ContactPartner,},
         props: {
         id: {
           type: String,
@@ -120,8 +117,7 @@
           },
           getOfferData() {
               let endpoint = `/api/offers/${this.id}/`;
-              // apiService(endpoint)
-              axiosService(endpoint)
+              this.axiosService(endpoint)
                   .then(data => {
                       this.offer = data;
                       this.offerAuthor = data.author;

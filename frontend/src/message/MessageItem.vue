@@ -17,11 +17,9 @@
 </template>
 
 <script>
-    import BasicCard from "../ui/BasicCard";
-    import BasicButton from "../ui/BasicButton";
     import ContactPartner from "../message/ContactPartner";
     export default {
-        components: {BasicButton, BasicCard, ContactPartner},
+        components: {ContactPartner},
         props: ['id', 'content', 'created_at', 'sender', 'receiver', 'mode',
         'sender_name', 'receiver_name'],
         computed: {

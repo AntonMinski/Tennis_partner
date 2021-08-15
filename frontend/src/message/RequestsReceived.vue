@@ -36,12 +36,10 @@
 </template>
 
 <script>
-    import RequestItem from "./RequestItem";
-    import { axiosService } from "../common/api.service";
     import MessageItem from "./MessageItem";
 
     export default {
-        components: {MessageItem, RequestItem},
+        components: {MessageItem},
         data() {
             return {
                 isLoading: false,
@@ -63,9 +61,7 @@
             },
         },
         created() {
-            // this.loadRequests();
             this.switchReceivedMode();
-            // this.switchReceivedMode()
         },
         methods: {
             getMessagesList() {
@@ -75,7 +71,7 @@
                     endpoint = this.next;
                 }
 
-                axiosService(endpoint)
+                this.axiosService(endpoint)
                     .then(data => {
                         this.messages_list.push(...data.results);
                         if (data.next) {

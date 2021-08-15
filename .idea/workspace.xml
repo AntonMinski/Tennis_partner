@@ -16,15 +16,19 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.10 messages with Load_more button">
+    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.11 answer button">
+      <change afterPath="$PROJECT_DIR$/frontend/src/mixins/apiService.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/mixins/csrf_token.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/message/ContactPartner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/ContactPartner.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/message/MessageItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/MessageItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/message/ReceivedItem.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/message/RequestsReceived.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/RequestsReceived.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/message/SentItem.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/offer/OfferDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/offer/OfferDetail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/offer/OffersList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/offer/OffersList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/webpack-stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack-stats.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/offers/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/offers/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/offers/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/offers/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +48,8 @@
       <list>
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="Vue Single File Component" />
         <option value="Python Script" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -79,7 +83,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/message" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/mixins" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -94,17 +98,18 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/frontend/src/message" />
-      <recent name="$PROJECT_DIR$/frontend/src/ui" />
-      <recent name="$PROJECT_DIR$/frontend/src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src/offer" />
       <recent name="$PROJECT_DIR$/frontend/src/home" />
       <recent name="$PROJECT_DIR$/frontend/src/message" />
       <recent name="$PROJECT_DIR$/frontend/src" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/mixins" />
+      <recent name="$PROJECT_DIR$/frontend/src/message" />
+      <recent name="$PROJECT_DIR$/frontend/src/ui" />
+      <recent name="$PROJECT_DIR$/frontend/src" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.tennis_partner">
@@ -278,7 +283,8 @@
       <workItem from="1628759286565" duration="7286000" />
       <workItem from="1628785124680" duration="66000" />
       <workItem from="1628831361820" duration="28462000" />
-      <workItem from="1628920318588" duration="18233000" />
+      <workItem from="1628920318588" duration="18299000" />
+      <workItem from="1629006527782" duration="3666000" />
     </task>
     <task id="LOCAL-00001" summary="01 Courts module with api done">
       <created>1628249973473</created>
@@ -448,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628934725334</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="2.11 answer button">
+      <created>1628939426414</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1628939426414</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,7 +515,8 @@
     <MESSAGE value="2.8.3 sending props to child done" />
     <MESSAGE value="2.9 sent/received messages" />
     <MESSAGE value="2.10 messages with Load_more button" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.10 messages with Load_more button" />
+    <MESSAGE value="2.11 answer button" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.11 answer button" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2022" y="592" width="187" height="185" key="#Custom_Plugin_Repositories" timestamp="1628328096922">
@@ -517,10 +531,10 @@
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state x="1615" y="418" width="482" height="630" key="#Python/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628264655361" />
-    <state x="1834" y="400" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1628746970572">
+    <state x="1834" y="400" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1629006621690">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state x="1834" y="400" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628746970572" />
+    <state x="1834" y="400" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629006621690" />
     <state x="1844" y="480" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1628747214986">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
@@ -533,38 +547,38 @@
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state x="1738" y="630" key="GitRewordDialog/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628858764768" />
-    <state width="1189" height="481" key="GridCell.Tab.0.bottom" timestamp="1628921759756">
+    <state width="1189" height="481" key="GridCell.Tab.0.bottom" timestamp="1628939470408">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1189" height="481" key="GridCell.Tab.0.bottom/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628921759756" />
-    <state width="1189" height="481" key="GridCell.Tab.0.center" timestamp="1628921759756">
+    <state width="1189" height="481" key="GridCell.Tab.0.bottom/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628939470408" />
+    <state width="1189" height="481" key="GridCell.Tab.0.center" timestamp="1628939470408">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1189" height="481" key="GridCell.Tab.0.center/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628921759756" />
-    <state width="1189" height="481" key="GridCell.Tab.0.left" timestamp="1628921759756">
+    <state width="1189" height="481" key="GridCell.Tab.0.center/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628939470408" />
+    <state width="1189" height="481" key="GridCell.Tab.0.left" timestamp="1628939470407">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1189" height="481" key="GridCell.Tab.0.left/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628921759756" />
-    <state width="1189" height="481" key="GridCell.Tab.0.right" timestamp="1628921759756">
+    <state width="1189" height="481" key="GridCell.Tab.0.left/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628939470407" />
+    <state width="1189" height="481" key="GridCell.Tab.0.right" timestamp="1628939470408">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1189" height="481" key="GridCell.Tab.0.right/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628921759756" />
-    <state width="1189" height="481" key="GridCell.Tab.1.bottom" timestamp="1628921759756">
+    <state width="1189" height="481" key="GridCell.Tab.0.right/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628939470408" />
+    <state width="1189" height="481" key="GridCell.Tab.1.bottom" timestamp="1628939470408">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1189" height="481" key="GridCell.Tab.1.bottom/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628921759756" />
-    <state width="1189" height="481" key="GridCell.Tab.1.center" timestamp="1628921759756">
+    <state width="1189" height="481" key="GridCell.Tab.1.bottom/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628939470408" />
+    <state width="1189" height="481" key="GridCell.Tab.1.center" timestamp="1628939470408">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1189" height="481" key="GridCell.Tab.1.center/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628921759756" />
-    <state width="1189" height="481" key="GridCell.Tab.1.left" timestamp="1628921759756">
+    <state width="1189" height="481" key="GridCell.Tab.1.center/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628939470408" />
+    <state width="1189" height="481" key="GridCell.Tab.1.left" timestamp="1628939470408">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1189" height="481" key="GridCell.Tab.1.left/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628921759756" />
-    <state width="1189" height="481" key="GridCell.Tab.1.right" timestamp="1628921759756">
+    <state width="1189" height="481" key="GridCell.Tab.1.left/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628939470408" />
+    <state width="1189" height="481" key="GridCell.Tab.1.right" timestamp="1628939470408">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1189" height="481" key="GridCell.Tab.1.right/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628921759756" />
+    <state width="1189" height="481" key="GridCell.Tab.1.right/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628939470408" />
     <state x="2075" y="198" width="1190" height="737" key="SettingsEditor" timestamp="1628673899248">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
@@ -581,10 +595,10 @@
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state x="1496" y="526" width="758" height="390" key="com.jetbrains.python.documentation.PythonDocumentationEntryEditor/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628316660386" />
-    <state x="1958" y="374" width="1481" height="522" key="find.popup" timestamp="1628754160573">
+    <state x="1958" y="374" width="1481" height="522" key="find.popup" timestamp="1629010907814">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state x="1958" y="374" width="1481" height="522" key="find.popup/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628754160573" />
+    <state x="1958" y="374" width="1481" height="522" key="find.popup/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629010907814" />
     <state width="600" height="440" key="javadoc.popup" timestamp="1628167149957">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>

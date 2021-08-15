@@ -23,10 +23,7 @@
 </template>
 
 <script>
-    import BasicCard from "../ui/BasicCard";
-    import {axiosService} from "../common/api.service";
     export default {
-        components: {BasicCard},
         // props: ['messageReceiver']
         props: {
             messageReceiver: {
@@ -49,7 +46,7 @@
                   content: this.message,
                   receiver: this.messageReceiver
               };
-              axiosService(endpoint, method, data)
+              this.axiosService(endpoint, method, data)
                   .then(data => {
                       console.log(data);
                   })

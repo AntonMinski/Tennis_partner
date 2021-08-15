@@ -26,14 +26,8 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import { axiosService } from "../common/api.service";
-import { apiService } from "../common/api.service";
-import BasicCard from "../ui/BasicCard";
 
 export default {
-  name: "Home",
-  components: {BasicCard},
   data() {
     return {
       offers: [],
@@ -49,8 +43,7 @@ export default {
         endpoint = this.next;
       }
       this.loadingOffers = true;
-      // apiService(endpoint)
-      axiosService(endpoint)
+      this.axiosService(endpoint)
         .then(data => {
           this.offers.push(...data.results);
           this.loadingOffers = false;
