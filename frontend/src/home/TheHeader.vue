@@ -8,8 +8,13 @@
                 <li><router-link to="/offers">Offers</router-link></li>
                 <li class="delim">/</li>
                 <li><router-link to="/messages">Messages</router-link></li>
-                <li><router-link to="/auth">Login</router-link></li>
-                <li v-if="isLoggedIn"><basic-button @click="logout ">Logout</basic-button></li>
+                <li><a href="/account/login/">Login</a></li>
+                <li><a href="/account/register/">Register</a></li>
+                <li><a href="/account/logout/">Logout</a></li>
+<!--                <li><router-link to="/account/login">Login</router-link></li>-->
+<!--                <li><router-link to="/account/register">Register</router-link></li>-->
+<!--                <li><router-link to="/account/logout">Logout</router-link></li>-->
+<!--                <li v-if="isLoggedIn"><basic-button @click="logout ">Logout</basic-button></li>-->
             </ul>
         </nav>
     </header>

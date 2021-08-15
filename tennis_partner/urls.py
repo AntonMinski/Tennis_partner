@@ -21,7 +21,7 @@ from django_registration.backends.one_step.views import RegistrationView
 
 from users.forms import CustomUserForm
 
-# from rest_auth.views import LoginView
+from rest_auth.views import LoginView
 
 from base.views import IndexTemplateView
 
@@ -37,11 +37,11 @@ urlpatterns = [
     path('api/rest-auth/', include("rest_auth.urls")),
     path('api/rest-auth/registration/',
          include("rest_auth.registration.urls")),
-    path('accounts/register/', RegistrationView.as_view(
+    path('account/register/', RegistrationView.as_view(
         form_class=CustomUserForm, success_url='/'),
          name='django_registration_register'),
-    path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/', include('django_registration.backends.one_step.urls')),
+    path('account/', include('django.contrib.auth.urls')),
+    path('account/', include('django_registration.backends.one_step.urls')),
 
     re_path(r"^.*$", IndexTemplateView.as_view(), name="entry-point")
 

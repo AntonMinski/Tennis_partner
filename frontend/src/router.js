@@ -29,10 +29,11 @@ const router = createRouter({
         { path: '/create_offer', component: OfferEditor, props: true},
         // { path: '/contact/:id', component: ContactPartner, props: true},
         { path: '/partners', component: PartnerList },
-        { path: '/partners/:id', component: PartnerDetail, props: true,},
-            // children: [
-            //     { path: 'contact', component: ContactPartner },
-            // ] },
+        { path: '/partners/:id', component: PartnerDetail, props: true,
+            children: [
+                { path: 'contact', component: ContactPartner, props: true },
+            ]
+        },
         { path: '/register', component: PartnerRegistration}, // meta: {requiresAuth: true}
         { path: '/messages', component: RequestsReceived, props:true,
             children: [
@@ -40,7 +41,7 @@ const router = createRouter({
             ]
         },
         { path: '//auth', component: UserAuth},  // meta: {requiresNone: true}
-        { path: '/:notFound(.*)', component: NotFound },
+        // { path: '/:notFound(.*)', component: NotFound },
     ],
 });
 

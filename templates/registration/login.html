@@ -4,18 +4,10 @@
 
 {% block auth %}
 
-    <div id="app23">
-
-
-    </div>
 
     <div id="app">
-    <p>[[ naming ]]</p>
     </div>
 
-{#    <script src="vue"></script>#}
-{#    <script src="https://unpkg.com/vue@next"></script>#}
-{#    <script src="https://unpkg.com/vue@next"></script>#}
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
     <script>
@@ -24,17 +16,15 @@
         el: '#app',
         data() {
             return {
-                naming: 'ghhhhhhhhhhhhhhhhhhh',
             };
         },
     });
-    {#newApp.mount('#app')#}
 
     </script>
 
 
-<h1>QuestionTime</h1>
-<p class="lead text-muted">Share Your Knowledge!</p>
+{#<h1>QuestionTime</h1>#}
+{#<p class="lead text-muted">Share Your Knowledge!</p>#}
 <div class="login-form-container">
     <form method="POST">
         {% csrf_token %}

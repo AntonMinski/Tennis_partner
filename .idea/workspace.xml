@@ -11,24 +11,20 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:merge_tp" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:simple_authorization" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.11 answer button">
-      <change afterPath="$PROJECT_DIR$/frontend/src/mixins/apiService.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/mixins/csrf_token.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/message/ContactPartner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/ContactPartner.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/message/MessageItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/MessageItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/message/ReceivedItem.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/message/RequestsReceived.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/RequestsReceived.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/message/SentItem.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/offer/OfferDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/offer/OfferDetail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/offer/OffersList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/offer/OffersList.vue" afterDir="false" />
+    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.12 mixin on apiService, axiosService">
+      <change beforePath="$PROJECT_DIR$/frontend/src/home/NavbarComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/home/NavbarComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/home/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/home/TheHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/modules/auth/actions_old.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/webpack-stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack-stats.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/auth_layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/auth_layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tennis_partner/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tennis_partner/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +52,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="merge_tp" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -83,7 +79,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/mixins" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Section-7-End-Of-The-Course-Project/QuestionTime" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -284,7 +280,7 @@
       <workItem from="1628785124680" duration="66000" />
       <workItem from="1628831361820" duration="28462000" />
       <workItem from="1628920318588" duration="18299000" />
-      <workItem from="1629006527782" duration="3666000" />
+      <workItem from="1629006527782" duration="9063000" />
     </task>
     <task id="LOCAL-00001" summary="01 Courts module with api done">
       <created>1628249973473</created>
@@ -461,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628939426414</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="2.12 mixin on apiService, axiosService">
+      <created>1629010944499</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1629010944499</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -478,7 +481,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="merge_tp" />
+                        <option value="simple_authorization" />
                       </list>
                     </value>
                   </entry>
@@ -516,7 +519,8 @@
     <MESSAGE value="2.9 sent/received messages" />
     <MESSAGE value="2.10 messages with Load_more button" />
     <MESSAGE value="2.11 answer button" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.11 answer button" />
+    <MESSAGE value="2.12 mixin on apiService, axiosService" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.12 mixin on apiService, axiosService" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2022" y="592" width="187" height="185" key="#Custom_Plugin_Repositories" timestamp="1628328096922">
@@ -535,14 +539,18 @@
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state x="1834" y="400" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629006621690" />
+    <state x="1543" y="532" width="573" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1629011069037">
+      <screen x="1280" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1543" y="532" width="573" height="403" key="#com.intellij.fileTypes.FileTypeChooser/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629011069037" />
     <state x="1844" y="480" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1628747214986">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state x="1844" y="480" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628747214986" />
-    <state x="1608" y="473" width="447" height="520" key="FileChooserDialogImpl" timestamp="1628841991543">
+    <state x="1608" y="473" width="447" height="520" key="FileChooserDialogImpl" timestamp="1629014753143">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state x="1608" y="473" width="447" height="520" key="FileChooserDialogImpl/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628841991543" />
+    <state x="1608" y="473" width="447" height="520" key="FileChooserDialogImpl/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629014753143" />
     <state x="1738" y="630" key="GitRewordDialog" timestamp="1628858764768">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
