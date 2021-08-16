@@ -8,6 +8,7 @@
                 <li><router-link to="/offers">Offers</router-link></li>
                 <li class="delim">/</li>
                 <li><router-link to="/messages">Messages</router-link></li>
+                <li><router-link to="/login_comp">Login_test</router-link></li>
                 <li><a href="/account/login/">Login</a></li>
                 <li><a href="/account/register/">Register</a></li>
                 <li><a href="/account/logout/">Logout</a></li>

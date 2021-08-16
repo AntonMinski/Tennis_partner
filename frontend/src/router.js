@@ -13,7 +13,7 @@ import store from './store/index'
 import OffersList from "./offer/OffersList";
 import OfferDetail from "./offer/OfferDetail";
 import OfferEditor from "./offer/OfferEditor";
-
+import LoginComponent from "./user/authorization/LoginComponent";
 
 
 const router = createRouter({
@@ -35,6 +35,7 @@ const router = createRouter({
             ]
         },
         { path: '/register', component: PartnerRegistration}, // meta: {requiresAuth: true}
+        { path: '/login_comp', component: LoginComponent}, // meta: {requiresAuth: true}
         { path: '/messages', component: RequestsReceived, props:true,
             children: [
                 {path: 'contact', component: ContactPartner, props: true,}
