@@ -6,7 +6,7 @@ class BaseUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = BaseUser
-        fields = ['username', 'email', 'first_name', 'last_name']
+        fields = ['username', 'email', 'first_name', 'last_name', 'password']
         # fields = "__all__"
 
 

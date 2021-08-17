@@ -17,12 +17,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.13 django login in process">
-      <change afterPath="$PROJECT_DIR$/frontend/src/user/authorization/LoginComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/home/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/home/TheHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/webpack-stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack-stats.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tennis_partner/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tennis_partner/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tennis_partner/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tennis_partner/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +41,8 @@
       <list>
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="Python Script" />
         <option value="Vue Single File Component" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -54,6 +53,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -604,10 +604,10 @@
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state x="2075" y="198" width="1190" height="737" key="SettingsEditor/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628673899248" />
-    <state x="1851" y="502" width="494" height="461" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1628760988860">
+    <state x="1851" y="502" width="494" height="461" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1629109331668">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state x="1851" y="502" width="494" height="461" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628760988860" />
+    <state x="1851" y="502" width="494" height="461" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629109331668" />
     <state x="1394" y="204" width="1476" height="987" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1628921713736">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>

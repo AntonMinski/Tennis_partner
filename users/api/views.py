@@ -5,7 +5,7 @@ from rest_framework import mixins, viewsets
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.views import APIView
 from rest_framework.response import Response
-
+from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 
 # from users.api.permissions import IsOwnerOrReadOnly, IsOwnProfileOrReadOnly
 from .serializers import UserProfileSerializer, \
@@ -13,6 +13,7 @@ from .serializers import UserProfileSerializer, \
 from .permissions import IsOwnPofileOrRead_only, IsOwnerOrReadOnly
 
 from users.models import UserProfile, Message, BaseUser
+from users.forms import CustomUserForm
 
 
 class BaseUserViewSet(ModelViewSet):
