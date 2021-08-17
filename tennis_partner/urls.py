@@ -22,7 +22,6 @@ from rest_framework.authentication import SessionAuthentication, BasicAuthentica
 from base.views import IndexTemplateView
 
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('core/', include("base.urls")),

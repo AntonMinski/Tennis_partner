@@ -1,11 +1,12 @@
 from rest_framework import generics, mixins, viewsets
 from rest_framework.filters import SearchFilter
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser
 from rest_framework import mixins, viewsets
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.authentication import SessionAuthentication, BasicAuthentication
+from rest_framework.authentication import SessionAuthentication, \
+    BasicAuthentication, TokenAuthentication
 
 # from users.api.permissions import IsOwnerOrReadOnly, IsOwnProfileOrReadOnly
 from .serializers import UserProfileSerializer, \
@@ -16,10 +17,20 @@ from users.models import UserProfile, Message, BaseUser
 from users.forms import CustomUserForm
 
 
-class BaseUserViewSet(ModelViewSet):
+class BaseUserViewSet(generics.ListAPIView):
     queryset = BaseUser.objects.all()
     serializer_class = BaseUserSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAdminUser]
+
+
+
+
+
+class RegisterCreateApiView(generics.ListCreateAPIView):
+    queryset = BaseUser.objects.all()
+    serializer_class = BaseUserSerializer
+    permission_classes = [AllowAny]
+    authentication_classes = [SessionAuthentication]
 
 
 class UserProfileViewSet_old(mixins.UpdateModelMixin, mixins.ListModelMixin,
@@ -30,6 +41,12 @@ class UserProfileViewSet_old(mixins.UpdateModelMixin, mixins.ListModelMixin,
 
 
 class UserProfileListApiView(generics.ListAPIView):
+    queryset = UserProfile.objects.all()
+    serializer_class = UserProfileSerializer
+    permission_classes = [IsAuthenticated, IsOwnPofileOrRead_only]
+
+
+
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer
     permission_classes = [IsAuthenticated, IsOwnPofileOrRead_only]

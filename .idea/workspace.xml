@@ -16,11 +16,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.13 django login in process">
+    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.13 django sessio auth;&#10;registration;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tennis_partner/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tennis_partner/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tennis_partner/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tennis_partner/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -280,6 +281,8 @@
       <workItem from="1628920318588" duration="18299000" />
       <workItem from="1629006527782" duration="15309000" />
       <workItem from="1629093933032" duration="1708000" />
+      <workItem from="1629193905635" duration="5529000" />
+      <workItem from="1629216675245" duration="1996000" />
     </task>
     <task id="LOCAL-00001" summary="01 Courts module with api done">
       <created>1628249973473</created>
@@ -477,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629023468425</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="2.13 django sessio auth;&#10;registration;">
+      <created>1629193943431</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1629193943431</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +518,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="03 authorization tweaks, new authorization modules" />
     <MESSAGE value="04 viewsets, routers" />
     <MESSAGE value="05 view filters" />
     <MESSAGE value="1.1 new user models logic,&#10;account registration" />
@@ -533,7 +542,8 @@
     <MESSAGE value="2.12 mixin on apiService, axiosService" />
     <MESSAGE value="2.13 django login with vue rendering" />
     <MESSAGE value="2.13 django login in process" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.13 django login in process" />
+    <MESSAGE value="2.13 django session auth;&#10;registration;" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.13 django session auth;&#10;registration;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2022" y="592" width="187" height="185" key="#Custom_Plugin_Repositories" timestamp="1628328096922">
@@ -560,14 +570,18 @@
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state x="1844" y="480" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628747214986" />
+    <state x="1798" y="629" width="353" height="224" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1629195859049">
+      <screen x="1280" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1798" y="629" width="353" height="224" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629195859049" />
     <state x="1608" y="473" width="447" height="520" key="FileChooserDialogImpl" timestamp="1629014753143">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state x="1608" y="473" width="447" height="520" key="FileChooserDialogImpl/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629014753143" />
-    <state x="1738" y="630" key="GitRewordDialog" timestamp="1628858764768">
+    <state x="1738" y="630" key="GitRewordDialog" timestamp="1629193954393">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state x="1738" y="630" key="GitRewordDialog/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628858764768" />
+    <state x="1738" y="630" key="GitRewordDialog/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629193954393" />
     <state width="1189" height="481" key="GridCell.Tab.0.bottom" timestamp="1628939470408">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
