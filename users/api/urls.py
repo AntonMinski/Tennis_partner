@@ -15,10 +15,14 @@ urlpatterns = [
     path('profiles/', views.UserProfileListApiView.as_view(), name='user-profile-list'),
     path('', views.BaseUserViewSet.as_view()),
     # path('avatar/', views.AvatarUpdateView.as_view(), name='avatar-update'),
-    path('register/', views.RegisterCreateApiView.as_view(), name='register'),
+    path('register/', views.UserCreate.as_view(), name='register_new'),
     path('avatar/', views.AvatarUpdateView.as_view(), name='avatar-update'),
-    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('token/obtain/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('token/verify/', TokenVerifyView.as_view(), name='token_verify'),
+    # path('dj-rest-auth/', include('dj_rest_auth.urls')),
+    # path('login/', include('dj_rest_auth.urls')),
+    path('login/', views.LoginAPIView.as_view()),
+
 
 ]

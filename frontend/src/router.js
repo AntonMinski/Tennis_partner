@@ -14,7 +14,7 @@ import OffersList from "./offer/OffersList";
 import OfferDetail from "./offer/OfferDetail";
 import OfferEditor from "./offer/OfferEditor";
 import LoginComponent from "./user/authorization/LoginComponent";
-
+import RegisterComponent from "./user/authorization/RegisterComponent";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -34,8 +34,9 @@ const router = createRouter({
                 { path: 'contact', component: ContactPartner, props: true },
             ]
         },
-        { path: '/register', component: PartnerRegistration}, // meta: {requiresAuth: true}
-        { path: '/login_comp', component: LoginComponent}, // meta: {requiresAuth: true}
+        // { path: '/register', component: PartnerRegistration}, // meta: {requiresAuth: true}
+        { path: '/register', component: RegisterComponent},
+        { path: '/login', component: LoginComponent},
         { path: '/messages', component: RequestsReceived, props:true,
             children: [
                 {path: 'contact', component: ContactPartner, props: true,}

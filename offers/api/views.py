@@ -7,6 +7,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticated
+from rest_framework_simplejwt.authentication import JWTTokenUserAuthentication, JWTAuthentication
 
 
 from .serializers import OfferSerializer, MessageSerializer
@@ -30,7 +31,9 @@ class MessageListCreateAPIView(generics.ListCreateAPIView):
     serializer_class = MessageSerializer
     permission_classes = [IsAuthenticated]
 
+
     def post(self, request):
+
         data_user_name = request.data['receiver']
         receiver = BaseUser.objects.get(username=data_user_name).id
         data = {
@@ -59,6 +62,7 @@ class MessagesSentListAPIView(generics.ListAPIView):
 class MessagesReceivedListAPIView(generics.ListAPIView):
     serializer_class = MessageSerializer
     permission_classes = [IsAuthenticated]
+    authentication_classes = [JWTAuthentication]
 
     def get_queryset(self):
         received_messages = Message.objects.filter(

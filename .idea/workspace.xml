@@ -16,10 +16,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.13 django sessio auth;&#10;registration;">
+    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.14 token reg">
+      <change afterPath="$PROJECT_DIR$/frontend/src/user/authorization/RegisterComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/mixins/apiService.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/mixins/apiService.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/user/authorization/LoginComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/user/authorization/LoginComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack-stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack-stats.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/offers/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/offers/api/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tennis_partner/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tennis_partner/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tennis_partner/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tennis_partner/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/views.py" afterDir="false" />
@@ -282,7 +287,8 @@
       <workItem from="1629006527782" duration="15309000" />
       <workItem from="1629093933032" duration="1708000" />
       <workItem from="1629193905635" duration="5529000" />
-      <workItem from="1629216675245" duration="1996000" />
+      <workItem from="1629216675245" duration="5837000" />
+      <workItem from="1629283195960" duration="11674000" />
     </task>
     <task id="LOCAL-00001" summary="01 Courts module with api done">
       <created>1628249973473</created>
@@ -487,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629193943431</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="2.14 token reg">
+      <created>1629221966375</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1629221966375</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,7 +531,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="04 viewsets, routers" />
     <MESSAGE value="05 view filters" />
     <MESSAGE value="1.1 new user models logic,&#10;account registration" />
     <MESSAGE value="1.2 BaseUser serializer and view" />
@@ -543,7 +555,8 @@
     <MESSAGE value="2.13 django login with vue rendering" />
     <MESSAGE value="2.13 django login in process" />
     <MESSAGE value="2.13 django session auth;&#10;registration;" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.13 django session auth;&#10;registration;" />
+    <MESSAGE value="2.14 token reg" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.14 token reg" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2022" y="592" width="187" height="185" key="#Custom_Plugin_Repositories" timestamp="1628328096922">

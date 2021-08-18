@@ -4,6 +4,12 @@
 
     export default {
         name: "apiService",
+        data() {
+            return {
+               token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI5MzgwNTM4LCJqdGkiOiIxM2VhYWVkOTlmYTM0N2IzOTdiYzE4ODc3YTAwODU2MCIsInVzZXJfaWQiOjJ9.4zQpVm0IL0hazcn6BdEJqxmSMiKh9Qm5NrhwxCCGSo8',
+               // token: '333eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYyOTM3NTI1NywianRpIjoiMmZhNzI4ODgwNjlhNGRjYmE4MDExNGY0ODM5ODQyMzYiLCJ1c2VyX2lkIjoyfQ.TEWy1d2uvaTqhq1Z2WK9lAJQOqPum21-1CU4VO1yDVs',
+            };
+        },
         methods: {
             getJSONFetch(response) {
                 if (response.status === 204) {
@@ -24,8 +30,10 @@
                     url: endpoint,
                     data: data !== undefined ? JSON.stringify(data) : null, //slf* is data not undefined, then use json.str.... otherwise it is null
                     headers: {
-                        "content-type": "application/json",
-                        "X-CSRFTOKEN": CSRF_TOKEN,
+                        'content-type': "application/json",
+                        // "Authorization": this.token,
+                        'X-CSRFTOKEN': CSRF_TOKEN,
+                        Authorization: `Bearer ${this.token}`
                     },
                 };
                 return axios(config)

@@ -1,15 +1,20 @@
-from rest_framework import generics, mixins, viewsets
+from rest_framework import generics, mixins, viewsets, status
 from rest_framework.filters import SearchFilter
 from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser
 from rest_framework import mixins, viewsets
 from rest_framework.viewsets import ModelViewSet
-from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.authentication import SessionAuthentication, \
     BasicAuthentication, TokenAuthentication
+from django.contrib.auth.hashers import make_password
+from rest_framework.generics import CreateAPIView, GenericAPIView
+from rest_framework.authtoken.models import Token
+from django.contrib.auth import authenticate, login
+from rest_framework.views import APIView
+from rest_framework_simplejwt.authentication import JWTTokenUserAuthentication, JWTAuthentication
 
 # from users.api.permissions import IsOwnerOrReadOnly, IsOwnProfileOrReadOnly
-from .serializers import UserProfileSerializer, \
+from .serializers import UserProfileSerializer, LoginSerializer, \
     UserProfileAvatarSerializer, MessageSerializer, BaseUserSerializer
 from .permissions import IsOwnPofileOrRead_only, IsOwnerOrReadOnly
 
@@ -22,15 +27,44 @@ class BaseUserViewSet(generics.ListAPIView):
     serializer_class = BaseUserSerializer
     permission_classes = [IsAdminUser]
 
+import json
 
-
-
-
-class RegisterCreateApiView(generics.ListCreateAPIView):
-    queryset = BaseUser.objects.all()
-    serializer_class = BaseUserSerializer
+class LoginAPIView(APIView):
     permission_classes = [AllowAny]
-    authentication_classes = [SessionAuthentication]
+    serializer_class = BaseUserSerializer
+
+    def post(self, request):
+        data = request.data
+        username = request.data['username']
+        password = request.data['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            current_user = request.user
+            data = {
+                'result': 'sucess',
+                'username': username,
+                'password': password,
+            }
+            return Response(data, status=status.HTTP_200_OK)
+
+
+class UserCreate(CreateAPIView):
+    def post(self, request, format='json'):
+        serializer = BaseUserSerializer(data=request.data)
+        if serializer.is_valid():
+            user = serializer.save()
+            if user:
+                user.set_password(request.data['password'])
+                token = Token.objects.create(user=user)
+                data = {
+                    'result': 'user registered',
+                    'token': token.key,
+                }
+                return Response(data, status=status.HTTP_201_CREATED)
+
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class UserProfileViewSet_old(mixins.UpdateModelMixin, mixins.ListModelMixin,
@@ -46,16 +80,11 @@ class UserProfileListApiView(generics.ListAPIView):
     permission_classes = [IsAuthenticated, IsOwnPofileOrRead_only]
 
 
-
-    queryset = UserProfile.objects.all()
-    serializer_class = UserProfileSerializer
-    permission_classes = [IsAuthenticated, IsOwnPofileOrRead_only]
-
-
 class MessageViewSet(ModelViewSet):
     # queryset = Message.objects.all()
     serializer_class = MessageSerializer
-    permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]
+    permission_classes = [IsAuthenticated]
+
     filter_backends = [SearchFilter]
     search_fields = ['sender']
 

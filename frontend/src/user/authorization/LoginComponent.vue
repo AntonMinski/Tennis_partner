@@ -3,7 +3,7 @@
         <form @submit.prevent="loginUser">
             <input type="text" v-model="username" placeholder="username" />
             <input type="password" v-model="password" placeholder="password" />
-            <button type="submit">Login</button>
+            <button type="submit">LoginUser</button>
         </form>
     </div>
 </template>
@@ -18,7 +18,7 @@
         },
         methods: {
             loginUser() {
-                const endpoint = "api/offers/";
+                const endpoint = "/api/users/login/";
                 const method = 'POST';
                 const data = {
                     username: this.username,
@@ -27,6 +27,7 @@
                 this.axiosService(endpoint, method, data)
                     .then(data => console.log(data))
                     .catch(error => console.log(error));
+
             },
         },
 
