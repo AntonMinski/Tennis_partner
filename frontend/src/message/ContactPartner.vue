@@ -5,7 +5,7 @@
                 <div>
                     <label for="email">Your Email</label>
                     <input type="text" id="email" v-model.trim="email">
-<!--                    <input type="email" id="email" v-model.trim="email">-->
+<!--                    <input type="username" id="username" v-model.trim="username">-->
                 </div>
                 <div>
                     <label for="message">Message</label>

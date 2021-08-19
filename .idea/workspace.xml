@@ -16,18 +16,31 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.14 token reg">
-      <change afterPath="$PROJECT_DIR$/frontend/src/user/authorization/RegisterComponent.vue" afterDir="false" />
+    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.15 token login and authorization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/token-auth-test2.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/token-auth-test2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/message/ContactPartner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/ContactPartner.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/message/MessageItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/MessageItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/message/RequestItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/RequestItem.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/mixins/apiService.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/mixins/apiService.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/modules/auth/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/modules/auth/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/modules/auth/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/modules/auth/getters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/modules/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/modules/auth/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/modules/auth/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/modules/auth/mutations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/modules/partners/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/modules/partners/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/user/UserAuth.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/user/UserAuth.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/user/authorization/LoginComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/user/authorization/LoginComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/user/authorization/RegisterComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/user/authorization/RegisterComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/webpack-stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack-stats.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/offers/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/offers/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tennis_partner/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tennis_partner/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,9 +59,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -83,7 +96,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Section-7-End-Of-The-Course-Project/QuestionTime" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/store/modules/auth" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -98,6 +111,13 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/store/modules/auth" />
+      <recent name="$PROJECT_DIR$/frontend/src/mixins" />
+      <recent name="$PROJECT_DIR$/frontend/src/message" />
+      <recent name="$PROJECT_DIR$/frontend/src/ui" />
+      <recent name="$PROJECT_DIR$/frontend/src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src/offer" />
       <recent name="$PROJECT_DIR$/frontend/src/home" />
@@ -105,32 +125,9 @@
       <recent name="$PROJECT_DIR$/frontend/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/frontend/src/mixins" />
-      <recent name="$PROJECT_DIR$/frontend/src/message" />
-      <recent name="$PROJECT_DIR$/frontend/src/ui" />
-      <recent name="$PROJECT_DIR$/frontend/src" />
-    </key>
   </component>
-  <component name="RunManager" selected="Django Server.tennis_partner">
-    <configuration name="Test: users.tests.MessageViewSetTestCase" type="DjangoTestsConfigurationType" temporary="true">
-      <module name="tennis_partner" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="users.tests.MessageViewSetTestCase" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
+  <component name="RunManager" selected="Node.js.try-1.js">
+    <configuration name="try-1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/frontend/src/home/try-1.js" working-dir="$PROJECT_DIR$/frontend/src/home">
       <method v="2" />
     </configuration>
     <configuration name="04" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -247,11 +244,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.try-1.js" />
         <item itemvalue="Python.views" />
         <item itemvalue="Python.fake db" />
         <item itemvalue="Python.token-auth-test2" />
         <item itemvalue="Python.04" />
-        <item itemvalue="Django tests.Test: users.tests.MessageViewSetTestCase" />
       </list>
     </recent_temporary>
   </component>
@@ -288,7 +285,9 @@
       <workItem from="1629093933032" duration="1708000" />
       <workItem from="1629193905635" duration="5529000" />
       <workItem from="1629216675245" duration="5837000" />
-      <workItem from="1629283195960" duration="11674000" />
+      <workItem from="1629283195960" duration="11699000" />
+      <workItem from="1629351027691" duration="125000" />
+      <workItem from="1629373978391" duration="12381000" />
     </task>
     <task id="LOCAL-00001" summary="01 Courts module with api done">
       <created>1628249973473</created>
@@ -500,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629221966375</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="2.15 token login and authorization">
+      <created>1629295050802</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1629295050802</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -531,7 +537,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="05 view filters" />
     <MESSAGE value="1.1 new user models logic,&#10;account registration" />
     <MESSAGE value="1.2 BaseUser serializer and view" />
     <MESSAGE value="1.3 offer models, views, serializers, urls" />
@@ -556,7 +561,8 @@
     <MESSAGE value="2.13 django login in process" />
     <MESSAGE value="2.13 django session auth;&#10;registration;" />
     <MESSAGE value="2.14 token reg" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.14 token reg" />
+    <MESSAGE value="2.15 token login and authorization" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.15 token login and authorization" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2022" y="592" width="187" height="185" key="#Custom_Plugin_Repositories" timestamp="1628328096922">
@@ -595,22 +601,22 @@
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state x="1738" y="630" key="GitRewordDialog/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629193954393" />
-    <state width="1189" height="481" key="GridCell.Tab.0.bottom" timestamp="1628939470408">
+    <state width="1384" height="124" key="GridCell.Tab.0.bottom" timestamp="1629386571426">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1189" height="481" key="GridCell.Tab.0.bottom/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628939470408" />
-    <state width="1189" height="481" key="GridCell.Tab.0.center" timestamp="1628939470408">
+    <state width="1384" height="124" key="GridCell.Tab.0.bottom/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629386571426" />
+    <state width="1384" height="124" key="GridCell.Tab.0.center" timestamp="1629386571426">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1189" height="481" key="GridCell.Tab.0.center/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628939470408" />
-    <state width="1189" height="481" key="GridCell.Tab.0.left" timestamp="1628939470407">
+    <state width="1384" height="124" key="GridCell.Tab.0.center/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629386571426" />
+    <state width="1384" height="124" key="GridCell.Tab.0.left" timestamp="1629386571426">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1189" height="481" key="GridCell.Tab.0.left/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628939470407" />
-    <state width="1189" height="481" key="GridCell.Tab.0.right" timestamp="1628939470408">
+    <state width="1384" height="124" key="GridCell.Tab.0.left/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629386571426" />
+    <state width="1384" height="124" key="GridCell.Tab.0.right" timestamp="1629386571426">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1189" height="481" key="GridCell.Tab.0.right/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628939470408" />
+    <state width="1384" height="124" key="GridCell.Tab.0.right/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629386571426" />
     <state width="1189" height="481" key="GridCell.Tab.1.bottom" timestamp="1628939470408">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
@@ -643,10 +649,10 @@
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state x="1496" y="526" width="758" height="390" key="com.jetbrains.python.documentation.PythonDocumentationEntryEditor/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628316660386" />
-    <state x="1958" y="374" width="1481" height="522" key="find.popup" timestamp="1629010907814">
+    <state x="1958" y="374" width="1481" height="522" key="find.popup" timestamp="1629386521299">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state x="1958" y="374" width="1481" height="522" key="find.popup/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629010907814" />
+    <state x="1958" y="374" width="1481" height="522" key="find.popup/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629386521299" />
     <state width="600" height="440" key="javadoc.popup" timestamp="1628167149957">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>

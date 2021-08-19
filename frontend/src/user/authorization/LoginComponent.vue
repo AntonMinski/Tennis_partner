@@ -17,7 +17,7 @@
             };
         },
         methods: {
-            loginUser() {
+            loginUser_old() {
                 const endpoint = "/api/users/login/";
                 const method = 'POST';
                 const data = {
@@ -29,6 +29,13 @@
                     .catch(error => console.log(error));
 
             },
+            loginUser() {
+                const actionPayload = {
+                    username: this.username,
+                    password: this.password,
+                };
+                this.$store.dispatch('login', actionPayload);
+            }
         },
 
 

@@ -1,7 +1,7 @@
 export default {
     async registerPartner(context, formData) {
         const userId = context.rootGetters.userId;
-        // const userId = 'p13';
+        // const username = 'p13';
         const partnerData = {
             firstName: formData.first,
             lastName: formData.last,

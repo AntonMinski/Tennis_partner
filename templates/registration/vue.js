@@ -5696,7 +5696,7 @@
     }
   }
 
-  var isTextInputType = makeMap('text,number,password,search,email,tel,url');
+  var isTextInputType = makeMap('text,number,password,search,username,tel,url');
 
   /*  */
 

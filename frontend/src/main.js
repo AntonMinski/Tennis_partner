@@ -9,14 +9,15 @@ import BasicButton from "./ui/BasicButton";
 import BasicBadge from "./ui/BasicBadge";
 import apiService from "./mixins/apiService";
 
-const BasicDialog = defineAsyncComponent(() => import("./ui/BasicDialog"))
-const LoadingSpinner = defineAsyncComponent(() => import("./ui/LoadingSpinner"))
+const BasicDialog = defineAsyncComponent(() => import("./ui/BasicDialog"));
+const LoadingSpinner = defineAsyncComponent(() => import("./ui/LoadingSpinner"));
 
-const app = createApp(App)
+const app = createApp(App);
 
 app.use(router);
 app.use(store);
 app.mixin(apiService)
+
 
 app.component('basic-card', BasicCard);
 app.component('basic-button', BasicButton);

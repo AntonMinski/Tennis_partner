@@ -6,7 +6,7 @@ from .models import UserProfile, Message, BaseUser
 
 class BaseUserAdmin(UserAdmin):
     model = BaseUser
-    list_filter = ['username', 'email', 'is_staff']
+    list_filter = ['username', 'username', 'is_staff']
 
 
 class UserProfileAdmin(admin.ModelAdmin):

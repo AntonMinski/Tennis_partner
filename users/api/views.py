@@ -44,6 +44,7 @@ class LoginAPIView(APIView):
             data = {
                 'result': 'sucess',
                 'username': username,
+                'userId': user.id,
                 'password': password,
             }
             return Response(data, status=status.HTTP_200_OK)

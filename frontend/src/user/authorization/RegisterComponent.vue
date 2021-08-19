@@ -1,11 +1,11 @@
 <template>
     <div>
-        <form @submit.prevent="Register">
+        <form @submit.prevent="registerUser">
             <input type="text" v-model="username" placeholder="username" />
             <input type="password" v-model="password" placeholder="password" />
             <button type="submit">Login</button>
         </form>
-        <button @click="Auth">Obtain Token</button>
+        <button @click="getToken">Obtain Token</button>
     </div>
 </template>
 
@@ -19,6 +19,20 @@
             };
         },
         methods: {
+            getToken() {
+                const actionPayload = {
+                    username: this.username,
+                    password: this.password,
+                };
+                this.$store.dispatch('getToken', actionPayload);
+            },
+            registerUser() {
+                const actionPayload = {
+                    username: this.username,
+                    password: this.password,
+                };
+                this.$store.dispatch('signup', actionPayload);
+            },
             Register() {
                 const endpoint = "/api/users/register/";
                 const method = 'POST';

@@ -25,7 +25,7 @@ class LoginSerializer(serializers.Serializer):
 
         if user is None:
             raise serializers.ValidationError(
-                'A user with this email and password was not found.'
+                'A user with this username and password was not found.'
             )
 
         if not user.is_active:
@@ -44,10 +44,10 @@ class BaseUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = BaseUser
-        fields = ['id', 'username', 'email', 'first_name', 'last_name', 'password']
+        fields = ['id', 'username', 'username', 'first_name', 'last_name', 'password']
         # extra_kwargs = {
         #     'username': {'write_only': True},
-        #     'email': {'write_only': True},
+        #     'username': {'write_only': True},
         #     'first_name': {'write_only': True},
         #     'last_name': {'write_only': True},
         #     'password': {'write_only': True},

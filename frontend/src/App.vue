@@ -21,7 +21,7 @@
             },
         },
         created() {
-            this.$store.dispatch('tryLogin');
+            this.$store.dispatch('checkLogin');
         },
         watch: {
             hadAutoLogout(curValue, oldValue) {

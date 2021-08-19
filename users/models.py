@@ -30,15 +30,15 @@ class UserProfile(models.Model):
     #     return self.user.username
     #
     # @property
-    # def email(self):
-    #     return self.user.email
+    # def username(self):
+    #     return self.user.username
 
 
 class Message(models.Model):
     sender = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     message_content = models.CharField(max_length=300)
     created_at = models.DateTimeField(auto_now_add=True)
-    # sender.email = models.ForeignKey(UserProfile.email)
+    # sender.username = models.ForeignKey(UserProfile.username)
 
     # def __str__(self):
     #     return str(self.user_profile)

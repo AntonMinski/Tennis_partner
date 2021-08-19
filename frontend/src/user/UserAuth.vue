@@ -9,8 +9,8 @@
     <basic-card>
       <form @submit.prevent="submitForm">
         <div class="form-control">
-          <label for="email">E-Mail</label>
-          <input type="email" id="email" v-model.trim="email" />
+          <label for="username">E-Mail</label>
+          <input type="text" id="username" v-model.trim="username" />
         </div>
         <div class="form-control">
           <label for="password">Password</label>
@@ -18,7 +18,7 @@
         </div>
         <p
           v-if="!formIsValid"
-        >Please enter a valid email and password (must be at least 6 characters long).</p>
+        >Please enter a valid username and password (must be at least 6 characters long).</p>
         <basic-button>{{ submitButtonCaption }}</basic-button>
         <basic-button type="button" mode="flat" @click="switchAuthMode">{{ switchModeButtonCaption }}</basic-button>
       </form>
@@ -30,7 +30,7 @@
 export default {
   data() {
     return {
-      email: '',
+      username: '',
       password: '',
       formIsValid: true,
       mode: 'login',
@@ -58,8 +58,8 @@ export default {
     async submitForm() {
       this.formIsValid = true;
       if (
-        this.email === '' ||
-        !this.email.includes('@') ||
+        this.username === '' ||
+        !this.username.includes('@') ||
         this.password.length < 6
       ) {
         this.formIsValid = false;
@@ -69,7 +69,7 @@ export default {
       this.isLoading = true;
 
       const actionPayload = {
-        email: this.email,
+        email: this.username,
         password: this.password,
       };
 

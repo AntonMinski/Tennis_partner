@@ -4,7 +4,7 @@ def client():
 
     # data = {
     #     "username": "resttest",
-    #     "email": "test@rest.com",
+    #     "username": "test@rest.com",
     #     "password1": "changeme123",
     #     "password2": "changeme123"
     #     }

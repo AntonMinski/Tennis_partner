@@ -1,7 +1,7 @@
 <template>
     <li>
 <!--        <div>-->
-<!--            <a :href="emailLink">{{ email }}</a>-->
+<!--            <a :href="emailLink">{{ username }}</a>-->
 <!--        </div>-->
         <basic-card>
 <!--        <p>{{ id }}</p>-->
@@ -27,7 +27,7 @@
              return this.$route.path + '/contact';
           },
             // emailLink() {
-            //     return 'mailto:' + this.email;
+            //     return 'mailto:' + this.username;
             // },
         },
     };

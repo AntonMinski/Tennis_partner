@@ -7,7 +7,6 @@
         data() {
             return {
                token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI5MzgwNTM4LCJqdGkiOiIxM2VhYWVkOTlmYTM0N2IzOTdiYzE4ODc3YTAwODU2MCIsInVzZXJfaWQiOjJ9.4zQpVm0IL0hazcn6BdEJqxmSMiKh9Qm5NrhwxCCGSo8',
-               // token: '333eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYyOTM3NTI1NywianRpIjoiMmZhNzI4ODgwNjlhNGRjYmE4MDExNGY0ODM5ODQyMzYiLCJ1c2VyX2lkIjoyfQ.TEWy1d2uvaTqhq1Z2WK9lAJQOqPum21-1CU4VO1yDVs',
             };
         },
         methods: {
