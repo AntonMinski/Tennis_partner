@@ -3,7 +3,7 @@ from rest_framework import serializers
 from users.models import UserProfile, Message, BaseUser
 
 
-class LoginSerializer(serializers.Serializer):
+class LoginSerializer_old(serializers.Serializer):
     username = serializers.CharField(max_length=255, read_only=True)
     password = serializers.CharField(max_length=128, write_only=True)
     token = serializers.CharField(max_length=255, read_only=True)
@@ -35,6 +35,17 @@ class LoginSerializer(serializers.Serializer):
         return {
             'username': user.username,
             'token': user.token
+        }
+
+
+class LoginSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = BaseUser
+        fields = ['username', 'password']
+        extra_kwargs = {
+            'username': {'write_only': True},
+            'password': {'write_only': True},
         }
 
 

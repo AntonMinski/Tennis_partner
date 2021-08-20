@@ -1,5 +1,8 @@
 import {CSRF_TOKEN} from "../../../mixins/csrf_token";
 
+//TODO: 1) actions method with aios instead of old mixin Axios Service;
+// 2) add token to method from part 1
+
 let timer;
 import axiosService from "../../../mixins/apiService"
 import axios from "axios";
@@ -29,6 +32,7 @@ export default {
             username: payload.username,
             password: payload.password,
         };
+        const data2 = data;
         const config = {
                     method: "POST",
                     url: endpoint,
@@ -57,9 +61,12 @@ export default {
                 // });
             })
             .catch(err => console.log(err));
-            console.log('done auth')
+            console.log('done auth');
+        return context.dispatch('getToken', data);
+
     },
     getToken(context, payload) {
+        console.log('payload.data', payload, payload.username, payload.password);
         const endpoint = "/api/users/token/obtain/";
         const method = 'POST';
         const data = {
@@ -78,13 +85,11 @@ export default {
         };
         axios(config)
             .then(response => {
-                console.log(response, response.data);
                 localStorage.setItem('token', response.data.access);
 
                 context.commit('setToken', {
                     token: response.data.access,
                 });
-                console.log(response.data.access)
             })
             .catch(error => console.log(error));
         console.log('get token scs')
@@ -111,6 +116,7 @@ export default {
                 userId: userId,
                 // tokenExpiration: null
             });
+            console.log('user has been set', token, userId);
         }
     },
 

@@ -23,6 +23,8 @@ urlpatterns = [
     # path('dj-rest-auth/', include('dj_rest_auth.urls')),
     # path('login/', include('dj_rest_auth.urls')),
     path('login/', views.LoginAPIView.as_view()),
+    path('rest-auth/', include('rest_auth.urls')),
 
 
 ]
+todo

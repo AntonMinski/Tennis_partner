@@ -31,13 +31,14 @@ import json
 
 class LoginAPIView(APIView):
     permission_classes = [AllowAny]
-    serializer_class = BaseUserSerializer
+    serializer_class = LoginSerializer
 
     def post(self, request):
         data = request.data
         username = request.data['username']
         password = request.data['password']
         user = authenticate(request, username=username, password=password)
+        user.set_password(request.data['password'])
         if user is not None:
             login(request, user)
             current_user = request.user
@@ -51,8 +52,10 @@ class LoginAPIView(APIView):
 
 
 class UserCreate(CreateAPIView):
+    serializer_class = BaseUserSerializer
+
     def post(self, request, format='json'):
-        serializer = BaseUserSerializer(data=request.data)
+        serializer = self.serializer_class(data=request.data)
         if serializer.is_valid():
             user = serializer.save()
             if user:
