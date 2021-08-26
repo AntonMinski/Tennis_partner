@@ -25,6 +25,5 @@ urlpatterns = [
     path('login/', views.LoginAPIView.as_view()),
     path('rest-auth/', include('rest_auth.urls')),
 
-
 ]
-todo
+

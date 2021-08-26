@@ -1,13 +1,33 @@
+import axios from "axios";
 import {CSRF_TOKEN} from "../../../mixins/csrf_token";
 
 //TODO: 1) actions method with aios instead of old mixin Axios Service;
 // 2) add token to method from part 1
+// 3) change all axios calls in components to new method from part 1/2
+// 4) turn on old auth logic from tutorial
 
 let timer;
 import axiosService from "../../../mixins/apiService"
-import axios from "axios";
+
 
 export default {
+    axiosRequest(context, payload) {
+        // console.log(payload);
+      const token = localStorage.getItem('token');
+        const config = {
+            method: payload.method || "GET",
+            url: payload.url || payload.endpoint,
+            data: payload.data !== undefined ? JSON.stringify(payload.data) : null, //slf* is data not undefined, then use json.str.... otherwise it is null
+            headers: {
+                'content-type': "application/json",
+                'X-CSRFTOKEN': CSRF_TOKEN,
+                Authorization: `Bearer ${token}`
+            },
+        };
+        // console.log('config=', config);
+        return axios(config);
+    },
+
     login(context, payload) {
         return context.dispatch('auth', {
             ...payload,
@@ -24,7 +44,6 @@ export default {
     auth(context, payload) {
         const mode = payload.mode;
         let endpoint = '/api/users/login/';
-        const method = 'POST';
         if (mode === 'signup') {
             endpoint = '/api/users/register/';
         }
@@ -32,67 +51,54 @@ export default {
             username: payload.username,
             password: payload.password,
         };
-        const data2 = data;
-        const config = {
+        const authPayload = {
                     method: "POST",
                     url: endpoint,
-                    data: JSON.stringify(data),
-                    headers: {
-                        'content-type': "application/json",
-                        'X-CSRFTOKEN': CSRF_TOKEN,
-                        // Authorization: `Bearer ${this.token}`
-                    },
+                    data: data,
                 };
-
-        axios(config)
-            .then(response => {
-                console.log(response);
-                localStorage.setItem('userId', response.data.userId);
-                localStorage.setItem('username', response.data.username);
-
-                context.commit('setUser', {
-                    username: response.data.username,
-                    userId: response.data.userId,
-                    // tokenExpiration: responseData.expirationDate,
-                });
-
-                // context.commit('setToken', {
-                //     token: data.idToken,
-                // });
-            })
+        context.dispatch('axiosRequest', authPayload)
+            // .then(response => {
+            //     console.log(response);
+            //     localStorage.setItem('userId', response.data.userId);
+            //     localStorage.setItem('username', response.data.username);
+            //
+            //     context.commit('setUser', {
+            //         username: response.data.username,
+            //         userId: response.data.userId,
+            //         // tokenExpiration: responseData.expirationDate,
+            //     });
+            //
+            //     // context.commit('setToken', {
+            //     //     token: data.idToken,
+            //     // });
+            // })
             .catch(err => console.log(err));
-            console.log('done auth');
+            // console.log('done auth');
         return context.dispatch('getToken', data);
 
     },
     getToken(context, payload) {
-        console.log('payload.data', payload, payload.username, payload.password);
-        const endpoint = "/api/users/token/obtain/";
-        const method = 'POST';
-        const data = {
-            username: payload.username,
-            password: payload.password,
-        };
-        const config = {
+        // console.log('payload.data', payload, payload.username, payload.password);
+        const tokenConfig = {
             method: "POST",
-            url: endpoint,
-            data: JSON.stringify(data),
-            headers: {
-                'content-type': "application/json",
-                'X-CSRFTOKEN': CSRF_TOKEN,
-                // Authorization: `Bearer ${this.token}`
-            },
+            url: "/api/users/token/obtain/",
+            data: {
+                username: payload.username,
+                password: payload.password,
+            }
         };
-        axios(config)
+        context.dispatch('axiosRequest', tokenConfig)
             .then(response => {
+                // console.log(response)
                 localStorage.setItem('token', response.data.access);
 
                 context.commit('setToken', {
                     token: response.data.access,
                 });
+                // console.log(response.data);
             })
             .catch(error => console.log(error));
-        console.log('get token scs')
+        // console.log('get token scs')
     },
     checkLogin(context) {
         const token = localStorage.getItem('token');
@@ -116,7 +122,7 @@ export default {
                 userId: userId,
                 // tokenExpiration: null
             });
-            console.log('user has been set', token, userId);
+            // console.log('user has been set', token, userId);
         }
     },
 

@@ -32,7 +32,6 @@
 </template>
 
 <script>
-import { apiService } from "../common/api.service";
     export default {
         name: "MessageComponent",
         props: {

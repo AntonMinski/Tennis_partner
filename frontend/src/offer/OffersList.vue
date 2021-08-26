@@ -43,12 +43,13 @@ export default {
         endpoint = this.next;
       }
       this.loadingOffers = true;
-      this.axiosService(endpoint)
-        .then(data => {
-          this.offers.push(...data.results);
+      this.$store.dispatch('axiosRequest', {endpoint:endpoint})
+        .then(response => {
+          console.log('data', response.data.results);
+          this.offers.push(...response.data.results);
           this.loadingOffers = false;
-          if (data.next) {
-            this.next = data.next;
+          if (response.data.next) {
+            this.next = response.data.next;
           } else {
             this.next = null;
           }

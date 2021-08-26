@@ -16,31 +16,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.15 token login and authorization">
+    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.17 automatic login + auth">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/token-auth-test2.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/token-auth-test2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/message/ContactPartner.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/ContactPartner.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/message/MessageItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/MessageItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/message/RequestItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/RequestItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/mixins/apiService.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/mixins/apiService.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/home/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/home/TheHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/message/MessageComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/MessageComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/offer/OffersList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/offer/OffersList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/store/modules/auth/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/modules/auth/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/modules/auth/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/modules/auth/getters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/modules/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/modules/auth/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/modules/auth/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/modules/auth/mutations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/modules/partners/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/modules/partners/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/user/UserAuth.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/user/UserAuth.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/user/authorization/LoginComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/user/authorization/LoginComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/user/authorization/RegisterComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/user/authorization/RegisterComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/webpack-stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack-stats.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/registration/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/vue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +111,10 @@
     </key>
   </component>
   <component name="RunManager" selected="Node.js.try-1.js">
-    <configuration name="try-1.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/frontend/src/home/try-1.js" working-dir="$PROJECT_DIR$/frontend/src/home">
+    <configuration name="try-1.js" type="NodeJSConfigurationType" temporary="true" path-to-node="node" nameIsGenerated="true" path-to-js-file="try-1.js" working-dir="$PROJECT_DIR$/frontend/src/home">
+      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
+        <browser start="true" with-js-debugger="true" />
+      </EXTENSION>
       <method v="2" />
     </configuration>
     <configuration name="04" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -287,7 +274,10 @@
       <workItem from="1629216675245" duration="5837000" />
       <workItem from="1629283195960" duration="11699000" />
       <workItem from="1629351027691" duration="125000" />
-      <workItem from="1629373978391" duration="12381000" />
+      <workItem from="1629373978391" duration="12425000" />
+      <workItem from="1629460127075" duration="606000" />
+      <workItem from="1629480932634" duration="4407000" />
+      <workItem from="1629983537240" duration="5737000" />
     </task>
     <task id="LOCAL-00001" summary="01 Courts module with api done">
       <created>1628249973473</created>
@@ -506,7 +496,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629295050802</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="2 16 Vuex authorization">
+      <created>1629386603954</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1629386603954</updated>
+    </task>
+    <task id="LOCAL-00033" summary="2.17 automatic login + auth">
+      <created>1629485270344</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1629485270344</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,8 +541,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1.1 new user models logic,&#10;account registration" />
-    <MESSAGE value="1.2 BaseUser serializer and view" />
     <MESSAGE value="1.3 offer models, views, serializers, urls" />
     <MESSAGE value="1.4 mesages views, routes" />
     <MESSAGE value="2.1 vue-part" />
@@ -562,7 +564,9 @@
     <MESSAGE value="2.13 django session auth;&#10;registration;" />
     <MESSAGE value="2.14 token reg" />
     <MESSAGE value="2.15 token login and authorization" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.15 token login and authorization" />
+    <MESSAGE value="2 16 Vuex authorization" />
+    <MESSAGE value="2.17 automatic login + auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.17 automatic login + auth" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2022" y="592" width="187" height="185" key="#Custom_Plugin_Repositories" timestamp="1628328096922">
@@ -593,6 +597,10 @@
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state x="1798" y="629" width="353" height="224" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629195859049" />
+    <state x="1670" y="385" width="666" height="694" key="#try-1.js" timestamp="1629482707879">
+      <screen x="1280" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1670" y="385" width="666" height="694" key="#try-1.js/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629482707879" />
     <state x="1608" y="473" width="447" height="520" key="FileChooserDialogImpl" timestamp="1629014753143">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
@@ -601,38 +609,70 @@
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state x="1738" y="630" key="GitRewordDialog/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629193954393" />
-    <state width="1384" height="124" key="GridCell.Tab.0.bottom" timestamp="1629386571426">
+    <state width="1384" height="248" key="GridCell.Tab.0.bottom" timestamp="1629485379763">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1384" height="124" key="GridCell.Tab.0.bottom/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629386571426" />
-    <state width="1384" height="124" key="GridCell.Tab.0.center" timestamp="1629386571426">
+    <state width="1384" height="248" key="GridCell.Tab.0.bottom/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629485379763" />
+    <state width="1384" height="248" key="GridCell.Tab.0.center" timestamp="1629485379763">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1384" height="124" key="GridCell.Tab.0.center/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629386571426" />
-    <state width="1384" height="124" key="GridCell.Tab.0.left" timestamp="1629386571426">
+    <state width="1384" height="248" key="GridCell.Tab.0.center/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629485379763" />
+    <state width="1384" height="248" key="GridCell.Tab.0.left" timestamp="1629485379763">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1384" height="124" key="GridCell.Tab.0.left/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629386571426" />
-    <state width="1384" height="124" key="GridCell.Tab.0.right" timestamp="1629386571426">
+    <state width="1384" height="248" key="GridCell.Tab.0.left/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629485379763" />
+    <state width="1384" height="248" key="GridCell.Tab.0.right" timestamp="1629485379763">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1384" height="124" key="GridCell.Tab.0.right/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629386571426" />
-    <state width="1189" height="481" key="GridCell.Tab.1.bottom" timestamp="1628939470408">
+    <state width="1384" height="248" key="GridCell.Tab.0.right/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629485379763" />
+    <state width="1384" height="248" key="GridCell.Tab.1.bottom" timestamp="1629485379764">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1189" height="481" key="GridCell.Tab.1.bottom/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628939470408" />
-    <state width="1189" height="481" key="GridCell.Tab.1.center" timestamp="1628939470408">
+    <state width="1384" height="248" key="GridCell.Tab.1.bottom/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629485379764" />
+    <state width="1384" height="248" key="GridCell.Tab.1.center" timestamp="1629485379764">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1189" height="481" key="GridCell.Tab.1.center/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628939470408" />
-    <state width="1189" height="481" key="GridCell.Tab.1.left" timestamp="1628939470408">
+    <state width="1384" height="248" key="GridCell.Tab.1.center/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629485379764" />
+    <state width="1384" height="248" key="GridCell.Tab.1.left" timestamp="1629485379764">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1189" height="481" key="GridCell.Tab.1.left/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628939470408" />
-    <state width="1189" height="481" key="GridCell.Tab.1.right" timestamp="1628939470408">
+    <state width="1384" height="248" key="GridCell.Tab.1.left/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629485379764" />
+    <state width="1384" height="248" key="GridCell.Tab.1.right" timestamp="1629485379764">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
-    <state width="1189" height="481" key="GridCell.Tab.1.right/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1628939470408" />
+    <state width="1384" height="248" key="GridCell.Tab.1.right/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629485379764" />
+    <state width="1384" height="248" key="GridCell.Tab.2.bottom" timestamp="1629485379764">
+      <screen x="1280" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1384" height="248" key="GridCell.Tab.2.bottom/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629485379764" />
+    <state width="1384" height="248" key="GridCell.Tab.2.center" timestamp="1629485379764">
+      <screen x="1280" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1384" height="248" key="GridCell.Tab.2.center/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629485379764" />
+    <state width="1384" height="248" key="GridCell.Tab.2.left" timestamp="1629485379764">
+      <screen x="1280" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1384" height="248" key="GridCell.Tab.2.left/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629485379764" />
+    <state width="1384" height="248" key="GridCell.Tab.2.right" timestamp="1629485379764">
+      <screen x="1280" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1384" height="248" key="GridCell.Tab.2.right/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629485379764" />
+    <state width="1384" height="248" key="GridCell.Tab.3.bottom" timestamp="1629485379764">
+      <screen x="1280" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1384" height="248" key="GridCell.Tab.3.bottom/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629485379764" />
+    <state width="1384" height="248" key="GridCell.Tab.3.center" timestamp="1629485379764">
+      <screen x="1280" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1384" height="248" key="GridCell.Tab.3.center/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629485379764" />
+    <state width="1384" height="248" key="GridCell.Tab.3.left" timestamp="1629485379764">
+      <screen x="1280" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1384" height="248" key="GridCell.Tab.3.left/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629485379764" />
+    <state width="1384" height="248" key="GridCell.Tab.3.right" timestamp="1629485379764">
+      <screen x="1280" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1384" height="248" key="GridCell.Tab.3.right/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629485379764" />
     <state x="2075" y="198" width="1190" height="737" key="SettingsEditor" timestamp="1628673899248">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
