@@ -31,6 +31,7 @@ import json
 
 class LoginAPIView(APIView):
     permission_classes = [AllowAny]
+    authentication_classes = [BasicAuthentication]
     serializer_class = LoginSerializer
 
     def post(self, request):

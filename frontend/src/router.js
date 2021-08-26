@@ -42,7 +42,7 @@ const router = createRouter({
                 {path: 'contact', component: ContactPartner, props: true,}
             ]
         },
-        { path: '//auth', component: UserAuth},  // meta: {requiresNone: true}
+        { path: '/auth', component: UserAuth},  // meta: {requiresNone: true}
         // { path: '/:notFound(.*)', component: NotFound },
     ],
 });

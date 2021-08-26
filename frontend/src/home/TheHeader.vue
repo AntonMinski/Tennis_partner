@@ -9,9 +9,9 @@
                 <li class="delim">/</li>
                 <li><router-link to="/messages">Messages</router-link></li>
 <!--                <li><router-link to="/login_comp">Login_test</router-link></li>-->
-                <li><a href="/login/">Login</a></li>
-                <li><a href="/register/">Register</a></li>
-                <li><a href="/logout/">Logout</a></li>
+                <li v-if="!isLoggedIn"><a href="/auth/">Login</a></li>
+                <li v-if="!isLoggedIn"><a href="/register/">Register</a></li>
+                <li v-if="isLoggedIn" @click="logout"><a href="/logout/">Logout</a></li>
 <!--                <li><router-link to="/account/login">Login</router-link></li>-->
 <!--                <li><router-link to="/account/register">Register</router-link></li>-->
 <!--                <li><router-link to="/account/logout">Logout</router-link></li>-->
@@ -27,7 +27,7 @@
         components: {BasicButton},
         computed: {
             isLoggedIn() {
-                return this.$store.getters.isAuthenticated;
+                return this.$store.getters.isLoggedIn;
             }
         },
         methods: {

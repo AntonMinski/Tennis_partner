@@ -54,6 +54,7 @@
         },
         computed: {
             receivedRequests() {
+                this.$store.dispatch('axiosRequest', {endpoint: this.endpoint})
                 return this.$store.getters['requests/requests']
             },
             hasRequests() {
@@ -71,11 +72,12 @@
                     endpoint = this.next;
                 }
 
-                this.axiosService(endpoint)
-                    .then(data => {
-                        this.messages_list.push(...data.results);
-                        if (data.next) {
-                            this.next = data.next;
+                this.$store.dispatch('axiosRequest', {endpoint:endpoint})
+                    .then(response => {
+                        console.log(response.data);
+                        this.messages_list.push(...response.data.results);
+                        if (response.data.next) {
+                            this.next = response.data.next;
                         } else {
                             this.next = null;
                         }

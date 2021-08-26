@@ -11,6 +11,9 @@ export default {
   isAuthenticated(state) {
     return !!state.token;
   },
+  isLoggedIn(state) {
+    return !!state.userId;
+  },
   hadAutoLogout(state) {
     return state.hadAutoLogout
   },

@@ -8,17 +8,17 @@
     </basic-dialog>
     <basic-card>
       <form @submit.prevent="submitForm">
-        <div class="form-control">
-          <label for="username">E-Mail</label>
-          <input type="text" id="username" v-model.trim="username" />
+        <div class="input-block">
+          <label for="username">Name</label>
+          <input type="username" id="username" v-model.trim="username" />
         </div>
-        <div class="form-control">
+        <div class="input-block">
           <label for="password">Password</label>
           <input type="password" id="password" v-model.trim="password" />
         </div>
         <p
           v-if="!formIsValid"
-        >Please enter a valid username and password (must be at least 6 characters long).</p>
+        >Please enter a valid email and password (must be at least 6 characters long).</p>
         <basic-button>{{ submitButtonCaption }}</basic-button>
         <basic-button type="button" mode="flat" @click="switchAuthMode">{{ switchModeButtonCaption }}</basic-button>
       </form>
@@ -55,12 +55,12 @@ export default {
     },
   },
   methods: {
-    async submitForm() {
+    submitForm() {
       this.formIsValid = true;
       if (
         this.username === '' ||
-        !this.username.includes('@') ||
-        this.password.length < 6
+        this.password === ''
+        // this.password.length < 6
       ) {
         this.formIsValid = false;
         return;
@@ -69,21 +69,18 @@ export default {
       this.isLoading = true;
 
       const actionPayload = {
-        email: this.username,
+        username: this.username,
         password: this.password,
       };
 
-       try {
-        if (this.mode === 'login') {
-          await this.$store.dispatch('login', actionPayload);
-        } else {
-          await this.$store.dispatch('signup', actionPayload);
-        }
-        const redirectUrl = '/' + (this.$route.query.redirect || 'partners');  // "query" = "?"
-        this.$router.replace(redirectUrl);
-      } catch (err) {
-        this.error = err.message || 'Failed to authenticate, try later.';
+      if (this.mode === 'login') {
+        this.$store.dispatch('login', actionPayload);
+      } else {
+        this.$store.dispatch('signup', actionPayload);
       }
+
+      const redirectUrl = '/' + (this.$route.query.redirect || 'partners');
+      this.$router.replace(redirectUrl);
 
       this.isLoading = false;
     },
@@ -96,7 +93,7 @@ export default {
     },
     handleError() {
       this.error = null;
-    }
+    },
   },
 };
 </script>
@@ -117,6 +114,15 @@ label {
   display: block;
 }
 
+.input-block {
+  margin: 0.5rem 0;
+  /*text-align: center;*/
+  /*vertical-align: center;*/
+  /*padding: 5rem;*/
+  /*display: flex;*/
+  /*vertical-align: top;*/
+}
+
 input,
 textarea {
   display: block;
@@ -133,5 +139,3 @@ textarea:focus {
   outline: none;
 }
 </style>
-
-

@@ -1,14 +1,9 @@
 import axios from "axios";
 import {CSRF_TOKEN} from "../../../mixins/csrf_token";
 
-//TODO: 1) actions method with aios instead of old mixin Axios Service;
-// 2) add token to method from part 1
-// 3) change all axios calls in components to new method from part 1/2
-// 4) turn on old auth logic from tutorial
+//TODO: 1) return old auth logic from tutorial
 
 let timer;
-import axiosService from "../../../mixins/apiService"
-
 
 export default {
     axiosRequest(context, payload) {
@@ -57,21 +52,15 @@ export default {
                     data: data,
                 };
         context.dispatch('axiosRequest', authPayload)
-            // .then(response => {
-            //     console.log(response);
-            //     localStorage.setItem('userId', response.data.userId);
-            //     localStorage.setItem('username', response.data.username);
-            //
-            //     context.commit('setUser', {
-            //         username: response.data.username,
-            //         userId: response.data.userId,
-            //         // tokenExpiration: responseData.expirationDate,
-            //     });
-            //
-            //     // context.commit('setToken', {
-            //     //     token: data.idToken,
-            //     // });
-            // })
+            .then(response => {
+                // console.log(response);
+                localStorage.setItem('userId', response.data.userId);
+                localStorage.setItem('username', response.data.username);
+                context.commit('setUser', {
+                    username: response.data.username,
+                    userId: response.data.userId,
+                });
+            })
             .catch(err => console.log(err));
             // console.log('done auth');
         return context.dispatch('getToken', data);
@@ -103,24 +92,11 @@ export default {
     checkLogin(context) {
         const token = localStorage.getItem('token');
         const userId = localStorage.getItem('userId');
-        // const tokenExpiration = localStorage.getItem('tokenExpiration')
-
-        // const expiresIn = +tokenExpiration - new Date().getTime();
-
-        // if (expiresIn < 0) {
-        //     console.log('token expired');
-        //      return;
-        // }
-
-        // timer = setTimeout(function () {
-        // context.dispatch('autoLogout');
-        // }, expiresIn);
 
         if (token && userId) {
             context.commit('setUser', {
                 token: token,
                 userId: userId,
-                // tokenExpiration: null
             });
             // console.log('user has been set', token, userId);
         }
@@ -129,7 +105,6 @@ export default {
     logout(context) {
         localStorage.removeItem('token');
         localStorage.removeItem('userId');
-        // localStorage.removeItem('tokenExpiration');
 
         clearTimeout(timer);
 
