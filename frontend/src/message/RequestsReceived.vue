@@ -1,7 +1,6 @@
 <template>
     <div>
 
-
         <basic-dialog :show="!!error" title="We received an error..."
                       @close="handleError">
             <p>{{ error }}</p>
@@ -16,25 +15,17 @@
         </basic-card>
             </div>
 
-        <div class="tab-container"><basic-card>
-        <va-tabs v-model="value" style="width: 100%;">
-            <template #tabs>
-                <va-tab @click="switchReceivedMode"
-                        label="abc" name="1"/>
-                <va-tab @click="switchSentMode"
-                        label="dfg" name="2"/>
-            </template>
-        </va-tabs>
-        </basic-card></div>
-
 
         <section>
-            <basic-card>
-                <header>
-                    <h2 v-if="receive_mode">Messages received</h2>
-                    <h2 v-else>Messages sent</h2>
-                </header>
-            </basic-card>
+<!--            <div class="header-block">-->
+<!--                <basic-card>-->
+<!--                    <header>-->
+<!--                        <h2 v-if="receive_mode">Messages received</h2>-->
+<!--                        <h2 v-else>Messages sent</h2>-->
+<!--                    </header>-->
+<!--                </basic-card>-->
+<!--            </div>-->
+
                 <loading-spinner v-if="isLoading"></loading-spinner>
                 <ul v-else-if="messages_list">
                     <message-item v-for="message in messages_list"
@@ -56,7 +47,9 @@
 </template>
 
 <script>
+    import MessageItem from "./MessageItem";
     export default {
+        components: {MessageItem},
         data() {
             return {
                 value: 'One',
@@ -135,6 +128,10 @@
 </script>
 
 <style scoped>
+    .header-block {
+        margin: 0 34.5%;
+    }
+
     .tab-container {
         display: block;
         width: 50%;
@@ -170,44 +167,42 @@
       padding: 0.5rem 1.5rem;
       font: inherit;
       background-color: #e8e8e8;
-      border: 1px solid #585858;
       color: #585858;
       cursor: pointer;
-      border-radius: 10px;
       margin-right: 0.5rem;
       display: inline-block;
-    }
-
-    button:hover,
-    button:active {
-      background-color: #8ace60;
-      border-color: #adce60;
-        color: white;
-        font-size: 1.2rem;
-    }
-
-    .flat {
-      background-color: transparent;
-      color: #787878;
       border: none;
+      border-radius: 0;
     }
+
 
     .outline {
       background-color: transparent;
-      border-color: #585858;
+      border: none;
       color: #585858;
+        border-radius: 0;
     }
 
-    .active_now {
-        background-color: #8ace60;
-        color: white;
+    .active_now,
+    .active_now:focus,
+    .active_now:active {
+        /*background-color: #8ace60;*/
+        outline:none !important;
+        background-color: transparent;
+        color: 787878;
+        border: none;
+        font-weight: 600;
+        border-bottom: #81e334 solid 2px;
+        border-radius: 0;
         /*border: #8ace60;*/
     }
 
       .active_now:hover {
+        outline:none !important;
         color: #444444;
           font-size: 1.1rem;
-          border: 3px solid #bef300;
+          border-bottom: 3px solid #81e334;
+          border-radius: 0;
         /*border: #8ace60;*/
     }
 
@@ -215,8 +210,14 @@
     .flat:active,
     .outline:hover,
     .outline:active {
-      background-color: #8ace60;
-        border: #8ace60;
+        outline:none !important;
+        font-size: 1.1rem;
+      /*background-color: #8ace60;*/
+      /*  border: #8ace60;*/
     }
+
+    button::-moz-focus-inner {
+  border: 0;
+}
 
 </style>

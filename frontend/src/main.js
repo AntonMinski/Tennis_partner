@@ -25,10 +25,10 @@ app.component('basic-badge', BasicBadge);
 app.component('loading-spinner', LoadingSpinner);
 app.component('basic-dialog', BasicDialog);
 
-import { VuesticPlugin } from 'vuestic-ui';
-import 'vuestic-ui/dist/vuestic-ui.css';
+// import { VuesticPlugin } from 'vuestic-ui';
+// import 'vuestic-ui/dist/vuestic-ui.css';
 
 
-app.use(VuesticPlugin);
+// app.use(VuesticPlugin);
 
 app.mount('#app');
