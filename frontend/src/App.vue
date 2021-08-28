@@ -33,7 +33,15 @@
     };
 </script>
 
-<style scoped>
+<style >
+:root {
+  --primary: #8ace60;
+  --secondary: #adce60;
+  --bg-white-grey: #e8e8e8;
+  --bg-border: #585858;
+  --bg: #787878;
+}
+
     * {
         box-sizing: border-box;
     }

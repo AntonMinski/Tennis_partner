@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="basic-button-block">
     <button v-if="!link" :class="mode">
         <slot></slot>
     </button>
@@ -32,6 +32,11 @@
 </script>
 
 <style scoped>
+.basic-button-block{
+    display: block;
+    margin: 0.75rem 0;
+}
+
 button,
 a {
   text-decoration: none;

@@ -16,16 +16,20 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.19 messages to vuex">
+    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.19 messages to vuex;&#10;header conditions;&#10;auth page returned;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/home/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/home/TheHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/message/RequestsReceived.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/RequestsReceived.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/modules/auth/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/modules/auth/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/modules/auth/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/modules/auth/getters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ui/BasicButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/BasicButton.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/user/PartnerFilter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/user/PartnerFilter.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/user/UserAuth.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/user/UserAuth.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vue.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/webpack-stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack-stats.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/offers/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/offers/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +51,7 @@
         <option value="Vue Single File Component" />
         <option value="Python Script" />
         <option value="JavaScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -82,6 +87,7 @@
     <property name="add_unversioned_files" value="true" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/user" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -278,7 +284,12 @@
       <workItem from="1629373978391" duration="12425000" />
       <workItem from="1629460127075" duration="606000" />
       <workItem from="1629480932634" duration="4407000" />
-      <workItem from="1629983537240" duration="11266000" />
+      <workItem from="1629983537240" duration="12431000" />
+      <workItem from="1630051437674" duration="15000" />
+      <workItem from="1630068799308" duration="11611000" />
+      <workItem from="1630088683637" duration="622000" />
+      <workItem from="1630138114041" duration="749000" />
+      <workItem from="1630150577338" duration="8284000" />
     </task>
     <task id="LOCAL-00001" summary="01 Courts module with api done">
       <created>1628249973473</created>
@@ -518,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629989331273</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="2.19 messages to vuex;&#10;header conditions;&#10;auth page returned;">
+      <created>1629997242155</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1629997242155</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -549,7 +567,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1.4 mesages views, routes" />
     <MESSAGE value="2.1 vue-part" />
     <MESSAGE value="2.1.1 webpack, router, component introducted" />
     <MESSAGE value="2.2 offer details" />
@@ -574,7 +591,8 @@
     <MESSAGE value="2 16 Vuex authorization" />
     <MESSAGE value="2.17 automatic login + auth" />
     <MESSAGE value="2.18 actions: axiosRequest;&#10;offers by vuex;" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.18 actions: axiosRequest;&#10;offers by vuex;" />
+    <MESSAGE value="2.19 messages to vuex;&#10;header conditions;&#10;auth page returned;" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.19 messages to vuex;&#10;header conditions;&#10;auth page returned;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2022" y="592" width="187" height="185" key="#Custom_Plugin_Repositories" timestamp="1628328096922">
@@ -597,6 +615,10 @@
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state x="1543" y="532" width="573" height="403" key="#com.intellij.fileTypes.FileTypeChooser/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629011069037" />
+    <state x="417" y="358" width="427" height="349" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1630151974653">
+      <screen x="0" y="27" width="1280" height="997" />
+    </state>
+    <state x="417" y="358" width="427" height="349" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1280.997/1280.0.1680.1050@0.27.1280.997" timestamp="1630151974653" />
     <state x="1844" y="480" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1628747214986">
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
@@ -609,6 +631,10 @@
       <screen x="1280" y="0" width="2560" height="1440" />
     </state>
     <state x="1670" y="385" width="666" height="694" key="#try-1.js/1280.0.2560.1440/0.416.1280.1024@1280.0.2560.1440" timestamp="1629482707879" />
+    <state x="275" y="303" width="719" height="452" key="EditFileWatcherDialog" timestamp="1630150749533">
+      <screen x="0" y="27" width="1280" height="997" />
+    </state>
+    <state x="275" y="303" width="719" height="452" key="EditFileWatcherDialog/0.27.1280.997/1280.0.1680.1050@0.27.1280.997" timestamp="1630150749533" />
     <state x="1495" y="345" width="763" height="380" key="FileChooserDialogImpl" timestamp="1629994879984">
       <screen x="1280" y="0" width="1680" height="1050" />
     </state>

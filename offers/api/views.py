@@ -8,7 +8,7 @@ from rest_framework.response import Response
 from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.authentication import JWTTokenUserAuthentication, JWTAuthentication
-
+from rest_framework.authentication import BasicAuthentication
 
 from .serializers import OfferSerializer, MessageSerializer
 from offers.models import Offer, Message
@@ -19,6 +19,7 @@ from .permissions import IsCreatorOrReadOnly
 class OfferViewSet(viewsets.ModelViewSet):
     queryset = Offer.objects.all().order_by("-created_at", "-updated_at")
     serializer_class = OfferSerializer
+    authentication_classes = [BasicAuthentication]
     permission_classes = [IsCreatorOrReadOnly, permissions.IsAuthenticatedOrReadOnly]
 
     def perform_create(self, serializer):

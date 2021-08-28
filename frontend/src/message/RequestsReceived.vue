@@ -1,13 +1,33 @@
 <template>
     <div>
+
+
         <basic-dialog :show="!!error" title="We received an error..."
                       @close="handleError">
             <p>{{ error }}</p>
         </basic-dialog>
-        <div>
+
+        <div class="tab-container">
+        <basic-card>
+            <div class="tab-set">
             <button @click="switchReceivedMode" :class="[ receive_mode ? 'active_now' : 'outline']">Received</button>
             <button @click="switchSentMode" :class="[ !receive_mode ? 'active_now' : 'outline']">Sent</button>
-        </div>
+            </div>
+        </basic-card>
+            </div>
+
+        <div class="tab-container"><basic-card>
+        <va-tabs v-model="value" style="width: 100%;">
+            <template #tabs>
+                <va-tab @click="switchReceivedMode"
+                        label="abc" name="1"/>
+                <va-tab @click="switchSentMode"
+                        label="dfg" name="2"/>
+            </template>
+        </va-tabs>
+        </basic-card></div>
+
+
         <section>
             <basic-card>
                 <header>
@@ -36,12 +56,10 @@
 </template>
 
 <script>
-    import MessageItem from "./MessageItem";
-
     export default {
-        components: {MessageItem},
         data() {
             return {
+                value: 'One',
                 isLoading: false,
                 error: null,
                 receive_mode: true,
@@ -117,6 +135,21 @@
 </script>
 
 <style scoped>
+    .tab-container {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        padding: 0 15%;
+    }
+
+    .tab-set {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+
     header {
         text-align: center;
     }

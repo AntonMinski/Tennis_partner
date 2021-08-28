@@ -27,7 +27,9 @@
 </template>
 
 <script>
+import BasicButton from "../ui/BasicButton";
 export default {
+  components: {BasicButton},
   data() {
     return {
       username: '',
@@ -99,6 +101,14 @@ export default {
 </script>
 
 <style scoped>
+.basic-button {
+  background-colour: #ffff;
+}
+
+.p-button {
+  background-color: $purple-300;
+}
+
 form {
   margin: 1rem;
   padding: 1rem;
