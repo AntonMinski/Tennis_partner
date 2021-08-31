@@ -27,17 +27,17 @@
 }
 
 .football {
-  background-color: #3d008d;
+  background-color: #008d28;
   color: white;
 }
 
 .tennis {
-  background-color: #71008d;
+  background-color: #b8b727;
   color: white;
 }
 
 .bike {
-  background-color: #8d006e;
+  background-color: #2d83af;
   color: white;
 }
 </style>

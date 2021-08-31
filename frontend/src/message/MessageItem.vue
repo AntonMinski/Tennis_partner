@@ -5,10 +5,10 @@
 <!--        </div>-->
         <basic-card>
 <!--        <p>{{ id }}</p>-->
-        <p v-if="mode">Sender: {{ sender_name }}</p>
-        <p v-else>Sent to: {{ receiver_name }}</p>
-        <p>{{ content }}</p>
-        <p>{{ created_at }}</p>
+            <p v-if="mode"><span>Sender:</span> {{ sender_name }}</p>
+            <p v-else><span>Sent to:</span> {{ receiver_name }}</p>
+            <p><span>Content:</span> {{ content }}</p>
+            <p><span>Date:</span> {{ created_at }}</p>
             <basic-button link :to="contactLink">Answer</basic-button>
             <router-view :message-receiver="receiver_name"></router-view>
             </basic-card>

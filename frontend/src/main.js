@@ -7,6 +7,7 @@ import store from "./store";
 import BasicCard from "./ui/BasicCard";
 import BasicButton from "./ui/BasicButton";
 import BasicBadge from "./ui/BasicBadge";
+import BasicIcon from "./ui/BasicIcon";
 import apiService from "./mixins/apiService";
 
 
@@ -24,11 +25,9 @@ app.component('basic-button', BasicButton);
 app.component('basic-badge', BasicBadge);
 app.component('loading-spinner', LoadingSpinner);
 app.component('basic-dialog', BasicDialog);
+app.component('basic-icon', BasicIcon);
 
-// import { VuesticPlugin } from 'vuestic-ui';
-// import 'vuestic-ui/dist/vuestic-ui.css';
-
-
+//icons:
 // app.use(VuesticPlugin);
 
 app.mount('#app');
