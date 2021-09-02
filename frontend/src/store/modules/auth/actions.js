@@ -7,7 +7,6 @@ let timer;
 
 export default {
     axiosRequest(context, payload) {
-        // console.log(payload);
       const token = localStorage.getItem('token');
         const config = {
             method: payload.method || "GET",
@@ -19,7 +18,6 @@ export default {
                 Authorization: `Bearer ${token}`
             },
         };
-        // console.log('config=', config);
         return axios(config);
     },
 
@@ -53,7 +51,6 @@ export default {
                 };
         context.dispatch('axiosRequest', authPayload)
             .then(response => {
-                // console.log(response);
                 localStorage.setItem('userId', response.data.userId);
                 localStorage.setItem('username', response.data.username);
                 context.commit('setUser', {
@@ -62,12 +59,10 @@ export default {
                 });
             })
             .catch(err => console.log(err));
-            // console.log('done auth');
         return context.dispatch('getToken', data);
 
     },
     getToken(context, payload) {
-        // console.log('payload.data', payload, payload.username, payload.password);
         const tokenConfig = {
             method: "POST",
             url: "/api/users/token/obtain/",
@@ -78,16 +73,13 @@ export default {
         };
         context.dispatch('axiosRequest', tokenConfig)
             .then(response => {
-                // console.log(response)
                 localStorage.setItem('token', response.data.access);
 
                 context.commit('setToken', {
                     token: response.data.access,
                 });
-                // console.log(response.data);
             })
             .catch(error => console.log(error));
-        // console.log('get token scs')
     },
     checkLogin(context) {
         const token = localStorage.getItem('token');
@@ -98,7 +90,6 @@ export default {
                 token: token,
                 userId: userId,
             });
-            // console.log('user has been set', token, userId);
         }
     },
 

@@ -13,8 +13,6 @@ import store from './store/index'
 import OffersList from "./offer/OffersList";
 import OfferDetail from "./offer/OfferDetail";
 import OfferEditor from "./offer/OfferEditor";
-import LoginComponent from "./user/authorization/LoginComponent";
-import RegisterComponent from "./user/authorization/RegisterComponent";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -23,39 +21,38 @@ const router = createRouter({
         { path: '/offers', component: OffersList},
         { path: '/offers/:id', component: OfferDetail, props: true,
             children: [
-                {path: 'contact', component: ContactPartner, props: true,},
+                {path: 'contact', component: ContactPartner, props: true,
+                meta: { requiresAuth: true } },
             ]
         },
-        { path: '/create_offer', component: OfferEditor, props: true},
-        // { path: '/contact/:id', component: ContactPartner, props: true},
+        { path: '/create_offer', component: OfferEditor, props: true,
+        meta: { requiresAuth: true } },
         { path: '/partners', component: PartnerList },
         { path: '/partners/:id', component: PartnerDetail, props: true,
             children: [
-                { path: 'contact', component: ContactPartner, props: true },
+                { path: 'contact', component: ContactPartner, props: true,
+                meta: { requiresAuth: true } },
             ]
         },
-        // { path: '/register', component: PartnerRegistration}, // meta: {requiresAuth: true}
-        { path: '/register', component: RegisterComponent},
-        { path: '/login', component: LoginComponent},
         { path: '/messages', component: RequestsReceived, props:true,
+            meta: { requiresAuth: true },
             children: [
-                {path: 'contact', component: ContactPartner, props: true,}
+                {path: 'contact', component: ContactPartner, props: true }
             ]
         },
-        { path: '/auth', component: UserAuth},  // meta: {requiresNone: true}
-        // { path: '/:notFound(.*)', component: NotFound },
+        { path: '/auth', component: UserAuth, meta: { requiresUnauth: true } },
+        { path: '/:notFound(.*)', component: NotFound },
     ],
 });
 
-// router.beforeEach(function (to, from, next) {
-//     if (to.meta.requiresAuth && store.getters.isAuthenticated) {
-//         next('/auth');
-//     } else if (to.meta.requiresNone && store.getters.isAuthenticated) {
-//         next('/partners');
-//     } else {
-//         next();
-//     }
-//
-// });
+router.beforeEach(function(to, _, next) {
+  if (to.meta.requiresAuth && !store.getters.isAuthenticated) {
+    next('/auth');
+  } else if (to.meta.requiresUnauth && store.getters.isAuthenticated) {
+    next('/partners');
+  } else {
+    next();
+  }
+});
 
 export default router;

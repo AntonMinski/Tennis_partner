@@ -6,8 +6,6 @@ from django.contrib.auth.decorators import login_required
 
 
 
-# class IndexTemplateView(LoginRequiredMixin, TemplateView):
-
 # @login_required(login_url='/login')
 class IndexTemplateView(TemplateView):
     # login_url = '/account/login/'

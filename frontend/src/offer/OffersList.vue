@@ -51,7 +51,6 @@
 <script>
 
 import BasicIcon from "../ui/BasicIcon";
-// import user from "../assets/icons/user";
 import place from "../assets/icons/place";
 import clock from "../assets/icons/clock";
 import level from "../assets/icons/level";
@@ -76,7 +75,6 @@ export default {
       this.loadingOffers = true;
       this.$store.dispatch('axiosRequest', {endpoint:endpoint})
         .then(response => {
-          console.log('data', response.data.results);
           this.offers.push(...response.data.results);
           this.loadingOffers = false;
           if (response.data.next) {
@@ -93,13 +91,10 @@ export default {
   },
   created() {
     this.getOffers();
-    // this.makeLink();
     document.title = "Tennis Partner";
   },
   computed: {
-    // offerDetailsLink() {
-    //   return this.$route.path + '/' + this.$refs.curBl.key
-    // },
+
   },
 };
 </script>
@@ -118,16 +113,6 @@ export default {
   h3 {
     text-align: center;
   }
-
-  .home {
-    /*padding: 2rem 0;*/
-        /*background-color:  background: rgb(255,255,255);*/
-    /*background: linear-gradient(126deg, rgba(255,255,255,1) 0%, rgba(224,224,224,1) 17%, rgba(250,250,250,1) 39%, rgba(237,236,236,1) 81%, rgba(255,255,255,1) 100%);*/
-  }
-
-  /*body {*/
-  /*  background-color: #81e334;*/
-  /*}*/
 
 .question-author {
   font-weight: bold;

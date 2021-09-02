@@ -1,10 +1,6 @@
 <template>
     <li>
-<!--        <div>-->
-<!--            <a :href="emailLink">{{ username }}</a>-->
-<!--        </div>-->
         <basic-card>
-<!--        <p>{{ id }}</p>-->
             <p v-if="mode"><span>Sender:</span> {{ sender_name }}</p>
             <p v-else><span>Sent to:</span> {{ receiver_name }}</p>
             <p><span>Content:</span> {{ content }}</p>
@@ -26,9 +22,7 @@
           contactLink() {
              return this.$route.path + '/contact';
           },
-            // emailLink() {
-            //     return 'mailto:' + this.username;
-            // },
+
         },
     };
 </script>

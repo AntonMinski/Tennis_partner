@@ -5,7 +5,6 @@
                 <div>
                     <label for="email">Your Email</label>
                     <input type="text" id="email" v-model.trim="email">
-<!--                    <input type="username" id="username" v-model.trim="username">-->
                 </div>
                 <div>
                     <label for="message">Message</label>
@@ -40,31 +39,21 @@
       },
         methods: {
             submitForm() {
-              let endpoint = `/api/messages/`;
-              let method = 'post';
-              const data = {
-                  content: this.message,
-                  receiver: this.messageReceiver
-              };
-              this.axiosService(endpoint, method, data)
+                const payload = {
+                    endpoint: `/api/messages/`,
+                    method: 'post',
+                    data: {
+                        content: this.message,
+                        receiver: this.messageReceiver
+                    }
+                };
+
+              this.$store.dispatch('axiosRequest', payload)
                   .then(data => {
+                      // THIS ACTION IN COSTRUCTION. REEDIRECT + MESSAGE WOULD BE HERE
                       console.log(data);
                   })
             },
-          submitForm_old() {
-              this.formIsValid = true;
-              if (this.email === '' ||
-                  this.message === '') {
-                  this.formIsValid = false;
-                  return;
-              }
-              this.$store.dispatch('requests/contactPartner', {
-                  partnerId: this.$route.params.id,
-                  email: this.email,
-                  message: this.message,
-              });
-              this.$router.replace('/partners');
-          },
         },
     };
 </script>

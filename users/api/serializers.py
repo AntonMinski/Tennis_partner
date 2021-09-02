@@ -1,6 +1,6 @@
 from django.contrib.auth import authenticate
 from rest_framework import serializers
-from users.models import UserProfile, Message, BaseUser
+from users.models import UserProfile, BaseUser
 
 
 class LoginSerializer_old(serializers.Serializer):
@@ -56,13 +56,6 @@ class BaseUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = BaseUser
         fields = ['id', 'username', 'username', 'first_name', 'last_name', 'password']
-        # extra_kwargs = {
-        #     'username': {'write_only': True},
-        #     'username': {'write_only': True},
-        #     'first_name': {'write_only': True},
-        #     'last_name': {'write_only': True},
-        #     'password': {'write_only': True},
-        # }
 
 
 
@@ -82,11 +75,3 @@ class UserProfileAvatarSerializer(serializers.ModelSerializer):
         model = UserProfile
         fields = ("avatar",)
 
-
-class MessageSerializer(serializers.ModelSerializer):
-
-    sender = serializers.StringRelatedField(read_only=True)
-
-    class Meta:
-        model = Message
-        fields = "__all__"

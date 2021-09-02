@@ -1,8 +1,5 @@
 <template>
     <li>
-<!--        <div>-->
-<!--            <a :href="emailLink">{{ username }}</a>-->
-<!--        </div>-->
         <p>{{ message }}</p>
     </li>
 </template>

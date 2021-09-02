@@ -1,4 +1,5 @@
 <script>
+    // OLD LOGIC, HAS BEEN CHANGED TO STORE / AUTH / ACTIONS
     import {CSRF_TOKEN} from "./csrf_token";
     import axios from "axios";
 

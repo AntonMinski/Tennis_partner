@@ -2,7 +2,10 @@
 .idea
 db.sqlite
 .base/migrations
+.users/migrations
+templates
 .venv
+.venv_new
 .uploads
 .frontend/node_modules
 .frontend/public

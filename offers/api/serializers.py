@@ -5,17 +5,13 @@ from datetime import datetime
 
 class MessageSerializer(serializers.ModelSerializer):
     sender_name = serializers.StringRelatedField(source='sender')
-    # created_dt = serializers.SerializerMethodField()
     receiver_name = serializers.StringRelatedField(source='receiver')
 
     class Meta:
         model = Message
         exclude = ['updated_at']
 
-    # def created_dt(self, instance):
-    #     time = datetime.now()
-    #     date_time = time.strftime("%m/%d/%Y, %H:%M:%S")
-    #     return date_time
+
 
 
 class OfferSerializer(serializers.ModelSerializer):
@@ -23,13 +19,6 @@ class OfferSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(read_only=True)
     receiver_name = serializers.StringRelatedField(source='user.username',
                                                    read_only=True)
-    # created_at = serializers.SerializerMethodField()
-
     class Meta:
         model = Offer
         fields = "__all__"
-
-    # def created_at(self, instance):
-    #     time = datetime.now()
-    #     date_time = time.strftime("%m/%d/%Y, %H:%M:%S")
-    #     return time

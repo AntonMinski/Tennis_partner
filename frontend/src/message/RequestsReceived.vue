@@ -17,14 +17,6 @@
 
 
         <section>
-<!--            <div class="header-block">-->
-<!--                <basic-card>-->
-<!--                    <header>-->
-<!--                        <h2 v-if="receive_mode">Messages received</h2>-->
-<!--                        <h2 v-else>Messages sent</h2>-->
-<!--                    </header>-->
-<!--                </basic-card>-->
-<!--            </div>-->
 
                 <loading-spinner v-if="isLoading"></loading-spinner>
                 <ul v-else-if="messages_list">

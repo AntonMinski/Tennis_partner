@@ -8,21 +8,6 @@ from .serializers import CourtSerializer, ReviewSerializer
 from .permissions import IsAdminUserOrReadOnly, IsReviewAuthorOrReadOnly
 
 
-'''
-class CourtListCreateApiView(mixins.ListModelMixin, mixins.CreateModelMixin,
-generics.GenericAPIView):
-    queryset = Court.objects.all()
-    serializer_class = CourtSerializer
-
-    def get(self, request, *args, **kwargs):
-        return self.list(request, *args, **kwargs)
-
-    def post(self, request, *args, **kwargs):
-        return self.create(request, *args, **kwargs)
-'''
-
-# то же самое на другом типе, в полуавтоматическом режиме:
-# (get и post по-умолчанию каr выше):
 class CourtListCreateApiView(generics.ListCreateAPIView):
     queryset = Court.objects.all().order_by("-id")
     serializer_class = CourtSerializer
@@ -30,7 +15,7 @@ class CourtListCreateApiView(generics.ListCreateAPIView):
     pagination_class = SmallSetPagination
 
 
-#  update(patch) и delete методы:
+#  update(patch) delete:
 class CourtEditApiView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Court.objects.all()
     serializer_class = CourtSerializer
@@ -60,7 +45,6 @@ class ReviewCreateApiView(generics.CreateAPIView):
 class ReviewEditApiView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
-    # permission_classes = [IsReviewAuthorOrReadOnly]
     permission_classes = []
 
 

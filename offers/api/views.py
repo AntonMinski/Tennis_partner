@@ -77,9 +77,7 @@ class MessageViewSet(viewsets.ModelViewSet):
 
     def create(self, request):
         data_receiver = request.data['receiver']
-        # data_sender = request.data['sender']
         receiver = BaseUser.objects.get(username=data_receiver).id
-        # sender = BaseUser.objects.get(username=data_sender).id
         data = {
             'sender': request.user.id,
             'receiver': receiver,
@@ -92,8 +90,3 @@ class MessageViewSet(viewsets.ModelViewSet):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-#
-#     def perform_create(self, serializer):
-#         print(self.kwargs)
-#         serializer.save(sender=self.request.user, receiver='1', content='dfdffd')
