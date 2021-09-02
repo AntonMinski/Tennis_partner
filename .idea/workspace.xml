@@ -16,23 +16,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.20_ some visual atributes">
-      <change afterPath="$PROJECT_DIR$/frontend/src/assets/icons/calendar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/assets/icons/clock.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/assets/icons/detailsIcon.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/assets/icons/level.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/assets/icons/place.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/assets/icons/user.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/ui/BasicIcon.vue" afterDir="false" />
+    <list default="true" id="e8598fcb-d815-4549-b28b-f0094b4e4e4b" name="Default Changelist" comment="2.21 icons offers">
+      <change afterPath="$PROJECT_DIR$/Project_Description.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/message/MessageItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/message/MessageItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/offer/OffersList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/offer/OffersList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/ui/BasicBadge.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/BasicBadge.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/ui/BasicCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ui/BasicCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/webpack-stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack-stats.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +76,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Markdown" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../TypeScript/first-project" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
@@ -105,19 +94,19 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/frontend/src/offer" />
-      <recent name="$PROJECT_DIR$/frontend/src/home" />
-      <recent name="$PROJECT_DIR$/frontend/src/message" />
-      <recent name="$PROJECT_DIR$/frontend/src" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src/user" />
       <recent name="$PROJECT_DIR$/frontend/src/store/modules/auth" />
       <recent name="$PROJECT_DIR$/frontend/src/mixins" />
       <recent name="$PROJECT_DIR$/frontend/src/message" />
       <recent name="$PROJECT_DIR$/frontend/src/ui" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/offer" />
+      <recent name="$PROJECT_DIR$/frontend/src/home" />
+      <recent name="$PROJECT_DIR$/frontend/src/message" />
+      <recent name="$PROJECT_DIR$/frontend/src" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.try-1.js">
@@ -303,7 +292,10 @@
       <workItem from="1630340596082" duration="9510000" />
       <workItem from="1630390051636" duration="2135000" />
       <workItem from="1630421407763" duration="1653000" />
-      <workItem from="1630423086134" duration="948000" />
+      <workItem from="1630423086134" duration="1114000" />
+      <workItem from="1630490981624" duration="217000" />
+      <workItem from="1630491503630" duration="4000" />
+      <workItem from="1630584884329" duration="2250000" />
     </task>
     <task id="LOCAL-00001" summary="01 Courts module with api done">
       <created>1628249973473</created>
@@ -557,7 +549,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630161628311</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="2.21 icons offers">
+      <created>1630424197554</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1630424197554</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,7 +587,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2.1.1 webpack, router, component introducted" />
     <MESSAGE value="2.2 offer details" />
     <MESSAGE value="2.3 gitignore" />
     <MESSAGE value="2.3.2 create offer, pagination_offers" />
@@ -613,7 +611,8 @@
     <MESSAGE value="2.18 actions: axiosRequest;&#10;offers by vuex;" />
     <MESSAGE value="2.19 messages to vuex;&#10;header conditions;&#10;auth page returned;" />
     <MESSAGE value="2.20_ some visual atributes" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.20_ some visual atributes" />
+    <MESSAGE value="2.21 icons offers" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.21 icons offers" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2022" y="592" width="187" height="185" key="#Custom_Plugin_Repositories" timestamp="1628328096922">

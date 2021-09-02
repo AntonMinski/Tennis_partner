@@ -1,0 +1,101 @@
+# Tennis Partner Node API Specifications
+
+- Service to find partners to play tennis or other sports together.
+- User can leave offer, sent messages to each other, look at other people profiles.
+- User with some privilegies can create courts with specified address.
+- Simple user can see courts on map and book courts.
+
+Backend: Python Django Rest
+Frontend: Vue (whole project by CLI, Vuex, Router, Axios, etc..)
+Authentification, protection: JWT token.
+User registration and login: username + pasword.
+Gathering together: Webpack, Django-Webpack
+Database: PostgreSQL (Django ORM)
+Routing: on frontend (backend - only API endpoints)
+
+# Software Design Pattern:
+1: FrontEnd - Facede
+2: BackEnd: classic MVT (had problems with facade on Django)
+
+# Base module:
+don't need now, wanted to made Facade Design Pattern, but had problems.
+would be implemented later, or on FrontEnd.
+
+
+### Offers (offer to play tennis, or other sports, at some place, at some
+time, with specific details)
+- List all offers in the database
+- Get offer by id / number
+ - Create new offer
+  * Registered users only
+- Update offer
+  * Owner or admin only
+- Delete offer
+  * Owner or admin only
+
+
+### Courts
+- List all courts
+- Get single court
+- Create new court
+  * Admin users only
+- Create Courts review
+  * registered users
+- Edit Courts review:
+  * author or admin
+- Update court
+  * admin only
+- Delete court
+  * admin only
+
+### Messages (realized in Offers module)
+Messages has 3 fields (and 2 automatic, related with date):
+1 - message itself
+2 - relation to user, that is sender
+3- relation to user, that is receiver
+endpoints:
+- List all messages (Admin only)
+- List all messages, related to user
+- Get a single message by id (user as sender or receiver only)
+- Get all sent messages by user
+- Get all received messages by user
+- Create message
+  * Authenticated users only
+- Update message
+  * author only
+- Delete message
+  * author only
+
+### Users & Authentication
+- Used Base django.contrib.auth.models AbstractUser
+- Addtitonal fields by additional Module (UserProfile), related to base User module
+- Authentication by JWT (SIMPLE_JWT module)
+  * JWT and cookie should expire in 1 day
+- User registration
+  * automatic profile creation on user registration
+  * Register as a "user"
+  * Once registered, a token will be sent along with a cookie (token = xxx)
+  * Passwords hashed
+- User login
+  * User can login with username and password
+  * Plain text password will compare with stored hashed password
+  * Once logged in, a token will be sent along with a cookie (token = xxx)
+- endpoint for tokens
+- User logout
+- User list - admin only
+- Update user info
+  * Admin, or profile owner only
+  * Separate route to update password
+- Delete user profile
+  * Admin, or profile owner only
+
+# User profile:
+- additional fields, like age, preferences, avatar, city, etc...
+- same principles and endpoints with User module
+
+# Avatar (picture, related to UserProfile:
+- create, edit, delete picture
+    * Owner or admin only
+
+## Documentation
+- Use Postman to create documentation

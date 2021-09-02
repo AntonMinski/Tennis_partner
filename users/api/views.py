@@ -121,7 +121,7 @@ class MessageViewSet(ModelViewSet):
 class AvatarUpdateView(generics.UpdateAPIView):
     # queryset = Message.objects.all()
     serializer_class = UserProfileAvatarSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsOwnPofileOrRead_only or IsAdminUser]
 
     def get_object(self):
         profile_object = self.request.user.userprofile
